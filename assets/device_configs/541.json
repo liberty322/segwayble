@@ -1,0 +1,817 @@
+{
+  "name": "device_commands",
+  "defaultConfigs": {
+    "timeout": 1000,
+    "retry": 5,
+    "cmd_read": 1,
+    "cmd_readACK": 4,
+    "cmd_write": 2,
+    "cmd_writeACK": 5,
+    "cmd_writeNR": 3
+  },
+  "commands": [
+    {
+      "name": "iapBegin",
+      "s_cmd": 7,
+      "s_index": 0
+    },
+    {
+      "name": "iapWrite",
+      "s_cmd": 8,
+      "s_index": 0
+    },
+    {
+      "name": "iapCRC",
+      "s_cmd": 9,
+      "s_index": 0
+    },
+    {
+      "name": "firmwareReset",
+      "s_cmd": 10,
+      "s_index": 0,
+      "s_data": 0,
+      "r_index": 0
+    },
+    {
+      "name": "rActDate",
+      "module": "mcu",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 105,
+      "r_index": 105
+    },
+    {
+      "name": "active",
+      "module": "mcu",
+      "s_cmd": 87,
+      "s_index": 0,
+      "ops": "writeNR"
+    },
+    {
+      "name": "rBool",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 178,
+      "s_data": 2,
+      "r_index": 178
+    },
+    {
+      "name": "rFunBool",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 125,
+      "s_data": 2,
+      "r_index": 125
+    },
+    {
+      "name": "setFunBool",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_index": 125
+    },
+    {
+      "name": "setCruice",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_data": 1,
+      "s_index": 124,
+      "r_index": 124
+    },
+    {
+      "name": "readCruice",
+      "module": "mcu",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 124,
+      "r_index": 124
+    },
+    {
+      "name": "setDecMode",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_data": 2,
+      "s_index": 118,
+      "r_index": 118
+    },
+    {
+      "name": "readDecMode",
+      "module": "mcu",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 118,
+      "r_index": 118
+    },
+    {
+      "name": "lock",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_data": 1,
+      "s_index": 112,
+      "r_index": 112
+    },
+    {
+      "name": "unlock",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_data": 1,
+      "s_index": 113,
+      "r_index": 113
+    },
+    {
+      "name": "rAccState",
+      "module": "ble",
+      "ops": "read",
+      "s_index": 77,
+      "s_data": 2,
+      "r_index": 77
+    },
+    {
+      "name": "openAcc_timout",
+      "module": "ble",
+      "ops": "writeNR",
+      "s_data": 1,
+      "s_index": 30,
+      "r_index": 30,
+      "timeout": 2000
+    },
+    {
+      "name": "rLeftMileage",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 37,
+      "s_data": 2,
+      "r_index": 37
+    },
+    {
+      "name": "rBattery",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 180,
+      "s_data": 2,
+      "r_index": 180
+    },
+    {
+      "name": "rSN",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 16,
+      "r_index": 16,
+      "s_data": 14
+    },
+    {
+      "name": "rMileage",
+      "module": "mcu",
+      "ops": "read",
+      "s_data": 4,
+      "s_index": 183,
+      "r_index": 183
+    },
+    {
+      "name": "rBodyTemp",
+      "module": "mcu",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 62
+    },
+    {
+      "name": "rMCUV",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 26,
+      "s_data": 2
+    },
+    {
+      "name": "rCtrlV",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 26,
+      "r_index": 26,
+      "s_data": 2
+    },
+    {
+      "name": "rBleV",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 104,
+      "s_data": 2,
+      "r_index": 104
+    },
+    {
+      "name": "rBmsV",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 103,
+      "s_data": 2
+    },
+    {
+      "name": "rStartSpeed",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 127,
+      "s_data": 2
+    },
+    {
+      "name": "wStartSpeed",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_index": 127
+    },
+    {
+      "name": "rPedestrianMode",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 119,
+      "s_data": 2
+    },
+    {
+      "name": "wPedestrianMode",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_index": 119
+    },
+    {
+      "name": "setHCali",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_index": 122,
+      "s_data": 1
+    },
+    {
+      "name": "rMaxPower",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 130,
+      "r_index": 130,
+      "s_data": 2
+    },
+    {
+      "name": "setMaxPower",
+      "module": "bms",
+      "ops": "writeNR",
+      "s_index": 63
+    },
+    {
+      "name": "rSpeed",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 181,
+      "s_data": 2
+    },
+    {
+      "name": "rBmsSn",
+      "module": "bms",
+      "ops": "read",
+      "retry": 0,
+      "s_data": 14,
+      "s_index": 2,
+      "r_index": 2
+    },
+    {
+      "name": "rCPUId",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 218,
+      "r_index": 218,
+      "s_data": 12
+    },
+    {
+      "name": "rRand",
+      "module": "mcu",
+      "ops": "read",
+      "s_data": 6,
+      "s_index": 228,
+      "r_index": 228
+    },
+    {
+      "name": "rFlag",
+      "module": "mcu",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 231,
+      "r_index": 231
+    },
+    {
+      "name": "rBatterySN",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 2,
+      "s_data": 14
+    },
+    {
+      "name": "rLightMode",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 122,
+      "s_data": 2,
+      "r_index": 122
+    },
+    {
+      "name": "setLightMode",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_index": 122
+    },
+    {
+      "name": "setLedModel",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_index": 141,
+      "r_index": 141
+    },
+    {
+      "name": "readLedModel",
+      "module": "mcu",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 141,
+      "r_index": 141
+    },
+    {
+      "name": "setEGearModel",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_index": 138,
+      "r_index": 138
+    },
+    {
+      "name": "readEGearModel",
+      "module": "mcu",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 138,
+      "r_index": 138
+    },
+    {
+      "name": "setDGearModel",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_index": 139,
+      "r_index": 139
+    },
+    {
+      "name": "readDGearModel",
+      "module": "mcu",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 139,
+      "r_index": 139
+    },
+    {
+      "name": "setSGearModel",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_index": 140,
+      "r_index": 140
+    },
+    {
+      "name": "readSGearModel",
+      "module": "mcu",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 140,
+      "r_index": 140
+    },
+    {
+      "name": "rErrorCode",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 27,
+      "s_data": 2
+    },
+    {
+      "name": "rWarnCode",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 28,
+      "s_data": 2
+    },
+    {
+      "name": "rVoltage",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 140,
+      "s_data": 4
+    },
+    {
+      "name": "rBmsTmp",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 150,
+      "s_data": 4
+    },
+    {
+      "name": "rBmsSOC",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 143,
+      "s_data": 2
+    },
+    {
+      "name": "rBmsCapacity",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 90,
+      "s_data": 2
+    },
+    {
+      "name": "rBmsRB",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 91,
+      "s_data": 2
+    },
+    {
+      "name": "rBmsVer",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 14,
+      "s_data": 2
+    },
+    {
+      "name": "rStateBool",
+      "module": "ble",
+      "ops": "read",
+      "s_index": 82,
+      "s_data": 2
+    },
+    {
+      "name": "wStartBond",
+      "module": "ble",
+      "ops": "write",
+      "s_cmd": 110,
+      "r_cmd": 110,
+      "s_index": 30
+    },
+    {
+      "name": "triggerHidBond",
+      "module": "ble",
+      "s_cmd": 110,
+      "r_cmd": 110,
+      "s_index": 14
+    },
+    {
+      "name": "resetHID",
+      "module": "ble",
+      "ops": "write",
+      "s_cmd": 110,
+      "r_cmd": 110,
+      "s_index": 13
+    },
+    {
+      "name": "clearHIDBond",
+      "module": "ble",
+      "ops": "write",
+      "s_cmd": 110,
+      "r_cmd": 110,
+      "s_index": 9
+    },
+    {
+      "name": "clearAllHIDBond",
+      "module": "ble",
+      "ops": "write",
+      "s_cmd": 110,
+      "r_cmd": 110,
+      "s_index": 12
+    },
+    {
+      "name": "setHIDRSSI",
+      "module": "ble",
+      "ops": "write",
+      "s_cmd": 110,
+      "r_cmd": 110,
+      "s_index": 2
+    },
+    {
+      "name": "getHIDRSSI",
+      "module": "ble",
+      "ops": "write",
+      "s_cmd": 110,
+      "r_cmd": 110,
+      "s_index": 11
+    },
+    {
+      "name": "rHidBool",
+      "module": "ble",
+      "ops": "read",
+      "s_index": 80,
+      "s_data": 2
+    },
+    {
+      "name": "rLock",
+      "module": "ble",
+      "ops": "read",
+      "s_index": 28,
+      "r_index": 28,
+      "s_data": 2
+    },
+    {
+      "name": "setLock",
+      "module": "ble",
+      "ops": "writeNR",
+      "s_index": 28,
+      "r_index": 28
+    },
+    {
+      "name": "rPwd",
+      "module": "ble",
+      "ops": "read",
+      "s_index": 29,
+      "s_data": 2,
+      "r_index": 29
+    },
+    {
+      "name": "setPwd",
+      "module": "ble",
+      "ops": "writeNR",
+      "s_index": 29
+    },
+    {
+      "name": "rTcs",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 243,
+      "r_index": 243,
+      "s_data": 2
+    },
+    {
+      "name": "setTcs",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_index": 243,
+      "r_index": 243
+    },
+    {
+      "name": "clearAllKeys",
+      "module": "ble",
+      "ops": "writeNR",
+      "s_cmd": 128,
+      "s_index": 0,
+      "r_index": 0
+    },
+    {
+      "name": "rUUID",
+      "module": "ble",
+      "ops": "read",
+      "s_index": 120,
+      "r_index": 120,
+      "s_data": 16
+    },
+    {
+      "name": "openFindMyPairBroadcast",
+      "module": "ble",
+      "ops": "write",
+      "s_index": 0,
+      "r_index": 0,
+      "s_cmd": 122
+    },
+    {
+      "name": "unbondFindMy",
+      "module": "ble",
+      "ops": "write",
+      "s_index": 0,
+      "r_index": 0,
+      "s_cmd": 123
+    },
+    {
+      "name": "rFindMyPairBroadcast",
+      "module": "ble",
+      "ops": "read",
+      "s_index": 32,
+      "r_index": 32,
+      "s_data": 2
+    },
+    {
+      "name": "rFindMyBondStatus",
+      "module": "ble",
+      "ops": "read",
+      "s_index": 23,
+      "r_index": 23,
+      "s_data": 2
+    },
+    {
+      "name": "rFindMyLocationStatus",
+      "module": "ble",
+      "ops": "read",
+      "s_index": 33,
+      "r_index": 33,
+      "s_data": 2
+    },
+    {
+      "name": "rBlePn",
+      "module": "ble",
+      "ops": "read",
+      "s_index": 89,
+      "r_index": 89,
+      "s_data": 14
+    },
+    {
+      "name": "rShowHideBool",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 35,
+      "r_index": 35,
+      "s_data": 2
+    },
+    {
+      "name": "rFunDisplayBool",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 35,
+      "r_index": 35,
+      "s_data": 2
+    },
+    {
+      "name": "rBMSCur",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 141,
+      "s_data": 2
+    },
+    {
+      "name": "rBMSVolt",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 140,
+      "s_data": 2
+    },
+    {
+      "name": "rSingleMileage",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 185,
+      "s_data": 2
+    },
+    {
+      "name": "rRunningTime",
+      "module": "mcu",
+      "ops": "read",
+      "s_index": 59,
+      "s_data": 2
+    },
+    {
+      "name": "wUnixTime",
+      "module": "ble",
+      "ops": "writeNR",
+      "s_index": 38,
+      "s_data": 4
+    },
+    {
+      "name": "rLogBool",
+      "module": "ble",
+      "ops": "read",
+      "s_index": 52,
+      "s_data": 2,
+      "r_index": 52
+    },
+    {
+      "name": "startSyncLog",
+      "module": "ble",
+      "ops": "writeNR",
+      "s_cmd": 32,
+      "s_index": 1
+    },
+    {
+      "name": "acceptLog",
+      "module": "ble",
+      "ops": "read",
+      "s_data": 2,
+      "r_cmd": 32,
+      "r_index": 0
+    },
+    {
+      "name": "stopSyncLog",
+      "module": "ble",
+      "ops": "writeNR",
+      "s_cmd": 32,
+      "s_index": 2
+    },
+    {
+      "name": "rBleBox",
+      "module": "ble",
+      "r_cmd": 5,
+      "s_cmd": 5,
+      "ops": "read",
+      "s_data": 4,
+      "s_index": 1024,
+      "r_index": 1024
+    },
+    {
+      "name": "rGearMode",
+      "module": "mcu",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 117,
+      "r_index": 117
+    },
+    {
+      "name": "rBmsMoreInfoLT",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 234,
+      "r_index": 234
+    },
+    {
+      "name": "rBmsRemainCapacityLT",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 138,
+      "r_index": 138
+    },
+    {
+      "name": "rBmsManufactureDateLT",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 10,
+      "r_index": 10
+    },
+    {
+      "name": "rBmsEnergyThroughputLT",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 4,
+      "s_index": 227,
+      "r_index": 227
+    },
+    {
+      "name": "rBmsCapacityThroughputLT",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 4,
+      "s_index": 225,
+      "r_index": 225
+    },
+    {
+      "name": "rBmsCycleCountLT",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 89,
+      "r_index": 89
+    },
+    {
+      "name": "rBmsDeepDischargeCountLT",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 137,
+      "r_index": 137
+    },
+    {
+      "name": "rBmsExtremeUseTimeLT",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 4,
+      "s_index": 245,
+      "r_index": 245
+    },
+    {
+      "name": "rBmsExtremeChargeTimeLT",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 4,
+      "s_index": 247,
+      "r_index": 247
+    },
+    {
+      "name": "setMaxSpeed",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_index": 148,
+      "r_index": 148
+    },
+    {
+      "name": "setMaxSpeed2",
+      "module": "mcu",
+      "ops": "writeNR",
+      "s_index": 148,
+      "r_index": 148
+    },
+    {
+      "name": "rEncryptionFlag",
+      "module": "mcu",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 149,
+      "r_index": 149
+    },
+    {
+      "name": "rBmsTempFrequence",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 16,
+      "s_index": 150,
+      "r_index": 150
+    },
+    {
+      "name": "rBmsCellVolFrequence",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 26,
+      "s_index": 160,
+      "r_index": 160
+    }
+  ]
+}

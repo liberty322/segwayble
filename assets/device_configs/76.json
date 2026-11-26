@@ -1,0 +1,878 @@
+{
+  "name": "device_commands",
+  "defaultConfigs": {
+    "timeout": 1000,
+    "retry": 5,
+    "cmd_read": 1,
+    "cmd_readACK": 4,
+    "cmd_write": 2,
+    "cmd_writeACK": 5,
+    "cmd_writeNR": 3
+  },
+  "commands": [
+    {
+      "name": "rBattery",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "retry": 0,
+      "s_data": 2,
+      "r_index": 18,
+      "s_index": 18
+    },
+    {
+      "name": "rLeftMileage",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "retry": 0,
+      "s_data": 2,
+      "s_index": 88,
+      "r_index": 88
+    },
+    {
+      "name": "rIdleModeBlancePoint",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 163,
+      "r_index": 163
+    },
+    {
+      "name": "setIdleModeBlancePoint",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 163
+    },
+    {
+      "name": "iapBegin",
+      "s_cmd": 7,
+      "s_index": 0
+    },
+    {
+      "name": "iapWrite",
+      "s_cmd": 8,
+      "s_index": 0
+    },
+    {
+      "name": "iapCRC",
+      "s_cmd": 9,
+      "s_index": 0
+    },
+    {
+      "name": "firmwareReset",
+      "s_cmd": 37,
+      "s_index": 0,
+      "s_data": 0,
+      "r_index": 0
+    },
+    {
+      "name": "rFunBool",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 211,
+      "r_index": 211
+    },
+    {
+      "name": "setFunBool",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 211
+    },
+    {
+      "name": "rKitBool",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "retry": 0,
+      "s_data": 2,
+      "s_index": 24,
+      "r_index": 24
+    },
+    {
+      "name": "rKitCtrlV",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 56,
+      "r_index": 56
+    },
+    {
+      "name": "rCtrlV",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 57,
+      "r_index": 57
+    },
+    {
+      "name": "rBmsV",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 6,
+      "s_index": 58,
+      "r_index": 58
+    },
+    {
+      "name": "rBleV",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 59,
+      "r_index": 59
+    },
+    {
+      "name": "resetData",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 155,
+      "s_data": 1
+    },
+    {
+      "name": "turnOff",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 121,
+      "s_data": 1
+    },
+    {
+      "name": "rSN",
+      "module": "kit_ctrl",
+      "s_data": 14,
+      "s_index": 33,
+      "r_index": 33,
+      "ops": "read"
+    },
+    {
+      "name": "rMileage",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 4,
+      "s_index": 60,
+      "r_index": 60
+    },
+    {
+      "name": "rBodyTemp",
+      "module": "ctrl",
+      "ops": "read",
+      "timeout": 2000,
+      "s_data": 2,
+      "s_index": 62,
+      "r_index": 62
+    },
+    {
+      "name": "rActDate",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 32,
+      "r_index": 32
+    },
+    {
+      "name": "rLimitSpeed",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 75,
+      "r_index": 75
+    },
+    {
+      "name": "wLimitSpeed",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_index": 75,
+      "r_index": 75
+    },
+    {
+      "name": "rSpeed",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "retry": 0,
+      "s_data": 2,
+      "s_index": 17
+    },
+    {
+      "name": "lock",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_data": 1,
+      "s_index": 68
+    },
+    {
+      "name": "unlock",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_data": 0,
+      "s_index": 68
+    },
+    {
+      "name": "rDiftingAssistState",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 4,
+      "s_index": 96
+    },
+    {
+      "name": "wDiftingAssistState",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_index": 96
+    },
+    {
+      "name": "rDriftingAssist",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 97
+    },
+    {
+      "name": "wDriftingAssist",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_index": 97
+    },
+    {
+      "name": "rControlMode",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 169,
+      "r_index": 169
+    },
+    {
+      "name": "setControlMode",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 169
+    },
+    {
+      "name": "rAssistMode",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 170,
+      "r_index": 170
+    },
+    {
+      "name": "setAssistMode",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 170,
+      "r_index": 170
+    },
+    {
+      "name": "rFunBool2",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 209,
+      "r_index": 209
+    },
+    {
+      "name": "setLedModel",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 198,
+      "r_index": 198
+    },
+    {
+      "name": "readLedModel",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 198,
+      "r_index": 198
+    },
+    {
+      "name": "setLedColor1",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 200,
+      "r_index": 200
+    },
+    {
+      "name": "rLedColor1",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 200,
+      "r_index": 200
+    },
+    {
+      "name": "setLedColor2",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 202,
+      "r_index": 202
+    },
+    {
+      "name": "rLedColor2",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 202,
+      "r_index": 202
+    },
+    {
+      "name": "setLedColor3",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 204,
+      "r_index": 204
+    },
+    {
+      "name": "rLedColor3",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 204,
+      "r_index": 204
+    },
+    {
+      "name": "setLedColor4",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 206,
+      "r_index": 206
+    },
+    {
+      "name": "rLedColor4",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 206,
+      "r_index": 206
+    },
+    {
+      "name": "rLedColor1_4",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 10,
+      "s_index": 198,
+      "r_index": 198
+    },
+    {
+      "name": "setBleName",
+      "module": "kit_ctrl",
+      "s_index": 40,
+      "ops": "writeNR"
+    },
+    {
+      "name": "rSpeedMode",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 29,
+      "r_index": 29
+    },
+    {
+      "name": "setSpeedMode",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_index": 29,
+      "r_index": 29
+    },
+    {
+      "name": "rSafeModeSpeed",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 100,
+      "r_index": 100
+    },
+    {
+      "name": "rNewcomerModeSpeed",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 101,
+      "r_index": 101
+    },
+    {
+      "name": "rSportModeSpeed",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 102,
+      "r_index": 102
+    },
+    {
+      "name": "rTrackModeSpeed",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 103,
+      "r_index": 103
+    },
+    {
+      "name": "rBmsSn",
+      "module": "bms",
+      "ops": "read",
+      "retry": 0,
+      "s_data": 14,
+      "r_index": 16,
+      "s_index": 16
+    },
+    {
+      "name": "rHighestSpeed",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 188,
+      "r_index": 188
+    },
+    {
+      "name": "rConnectedModel",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 95,
+      "r_index": 95
+    },
+    {
+      "name": "rIdleShake",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 74
+    },
+    {
+      "name": "wIdleShake",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_index": 74
+    },
+    {
+      "name": "rDrivingBeep",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 94
+    },
+    {
+      "name": "wDrivingBeepOn",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_data": 1,
+      "s_index": 94
+    },
+    {
+      "name": "wDrivingBeepOff",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_data": 0,
+      "s_index": 94
+    },
+    {
+      "name": "rFrontLight",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 69
+    },
+    {
+      "name": "wFrontLight",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_index": 69
+    },
+    {
+      "name": "rBatterySN",
+      "module": "bms",
+      "ops": "read",
+      "retry": 0,
+      "s_index": 16,
+      "s_data": 14
+    },
+    {
+      "name": "rBatteryInfo",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 49,
+      "s_data": 10
+    },
+    {
+      "name": "rVerDC",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 23,
+      "s_data": 4
+    },
+    {
+      "name": "rKitCtrlBox",
+      "module": "kit_ctrl",
+      "r_cmd": 12,
+      "s_cmd": 12,
+      "s_index": 0
+    },
+    {
+      "name": "rCtrlBox",
+      "module": "ctrl",
+      "r_cmd": 5,
+      "s_cmd": 5,
+      "ops": "read",
+      "s_data": 4,
+      "s_index": 16384,
+      "r_index": 16384
+    },
+    {
+      "name": "rSteering",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 93
+    },
+    {
+      "name": "wSteering",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_index": 93
+    },
+    {
+      "name": "setBlePwdEncrypt",
+      "module": "kit_ctrl",
+      "s_cmd": 96,
+      "r_cmd": 96,
+      "s_index": 1,
+      "ops": "writeNR"
+    },
+    {
+      "name": "setTeachStep",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_index": 70,
+      "r_index": 70
+    },
+    {
+      "name": "rTeachStep",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 70
+    },
+    {
+      "name": "setTeachComplete",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_index": 71,
+      "r_index": 71
+    },
+    {
+      "name": "rAcceInfo",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 25
+    },
+    {
+      "name": "rBreakInfo",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 26
+    },
+    {
+      "name": "rDriveDirection",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 143
+    },
+    {
+      "name": "rCPUId",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_index": 62,
+      "r_index": 62,
+      "s_data": 12
+    },
+    {
+      "name": "rCPUIdA",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_index": 62,
+      "r_index": 62,
+      "s_data": 2
+    },
+    {
+      "name": "active",
+      "module": "kit_ctrl",
+      "s_cmd": 87,
+      "s_index": 0,
+      "ops": "writeNR"
+    },
+    {
+      "name": "rHintCode",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "retry": 0,
+      "s_index": 72,
+      "s_data": 4
+    },
+    {
+      "name": "rMaxAndAveSpeed",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "retry": 0,
+      "s_index": 76,
+      "s_data": 4
+    },
+    {
+      "name": "rRealTimeInfo",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_index": 16,
+      "s_data": 6
+    },
+    {
+      "name": "rRunningTime",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 186,
+      "s_data": 2
+    },
+    {
+      "name": "rVibrateMode",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_index": 106,
+      "r_index": 106,
+      "s_data": 2
+    },
+    {
+      "name": "setVibrateMode",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_index": 106,
+      "r_index": 106
+    },
+    {
+      "name": "rRunningMode",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_index": 104,
+      "r_index": 104,
+      "s_data": 2
+    },
+    {
+      "name": "setRunningMode",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_index": 104,
+      "r_index": 104
+    },
+    {
+      "name": "rLimitSpeedModeSpeed",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_index": 105,
+      "r_index": 105,
+      "s_data": 2
+    },
+    {
+      "name": "setLimitSpeedModeSpeed",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_index": 105,
+      "r_index": 105
+    },
+    {
+      "name": "rLimitSpeedModeMaxSpeed",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_index": 108,
+      "r_index": 108,
+      "s_data": 2
+    },
+    {
+      "name": "rLimitSpeedMode",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_index": 107,
+      "r_index": 107,
+      "s_data": 2
+    },
+    {
+      "name": "setLimitSpeedMode",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_index": 107,
+      "r_index": 107
+    },
+    {
+      "name": "rSupportGameMode",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_index": 111,
+      "r_index": 111,
+      "s_data": 2
+    },
+    {
+      "name": "rKitSwDisV",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 115,
+      "r_index": 115
+    },
+    {
+      "name": "rKitSwCpuV",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 116,
+      "r_index": 116
+    },
+    {
+      "name": "rKitSwUsbV",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 118,
+      "r_index": 118
+    },
+    {
+      "name": "rBool2",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 112,
+      "r_index": 112
+    },
+    {
+      "name": "rCtrlSN",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 14,
+      "s_index": 16,
+      "r_index": 16
+    },
+    {
+      "name": "rKitUnit",
+      "module": "kit_ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 117,
+      "r_index": 117
+    },
+    {
+      "name": "setKitUnit",
+      "module": "kit_ctrl",
+      "ops": "writeNR",
+      "s_index": 117,
+      "r_index": 117
+    },
+    {
+      "name": "rBmsMoreInfo",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 139,
+      "r_index": 139
+    },
+    {
+      "name": "rBmsRemainCapacity",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 138,
+      "r_index": 138
+    },
+    {
+      "name": "rBmsManufactureDate",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 32,
+      "r_index": 32
+    },
+    {
+      "name": "rBmsEnergyThroughput",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 4,
+      "s_index": 128,
+      "r_index": 128
+    },
+    {
+      "name": "rBmsCapacityThroughput",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 4,
+      "s_index": 130,
+      "r_index": 130
+    },
+    {
+      "name": "rBmsCycleCount",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 27,
+      "r_index": 27
+    },
+    {
+      "name": "rBmsDeepDischargeCount",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 133,
+      "r_index": 133
+    },
+    {
+      "name": "rBmsExtremeUseTime",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 4,
+      "s_index": 136,
+      "r_index": 136
+    },
+    {
+      "name": "rBmsExtremeChargeTime",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 4,
+      "s_index": 134,
+      "r_index": 134
+    },
+    {
+      "name": "rBmsDate",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 32,
+      "s_data": 2
+    },
+    {
+      "name": "rBmsInfoLowFrequence",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 16,
+      "s_data": 18
+    },
+    {
+      "name": "rBmsInfoLowFrequence2",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 27,
+      "s_data": 4
+    },
+    {
+      "name": "rBmsInfoHighFrequence",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 49,
+      "s_data": 8
+    },
+    {
+      "name": "rBmsTemp",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 53,
+      "s_data": 2
+    },
+    {
+      "name": "rBmsCellVol",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 64,
+      "s_data": 20
+    }
+  ]
+}

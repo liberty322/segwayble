@@ -1,0 +1,800 @@
+{
+  "defaultConfigs": {
+    "cmd_writeNR": 3,
+    "cmd_writeACK": 5,
+    "cmd_readACK": 4,
+    "cmd_read": 1,
+    "timeout": 1000,
+    "retry": 5,
+    "cmd_write": 2
+  },
+  "name": "device_commands",
+  "commands": [
+    {
+      "s_index": 0,
+      "name": "iapBegin",
+      "s_cmd": 7
+    },
+    {
+      "s_index": 0,
+      "name": "iapWrite",
+      "s_cmd": 8
+    },
+    {
+      "s_index": 0,
+      "name": "iapCRC",
+      "s_cmd": 9
+    },
+    {
+      "s_data": 0,
+      "s_index": 0,
+      "name": "firmwareReset",
+      "r_index": 0,
+      "s_cmd": 10
+    },
+    {
+      "s_data": 0,
+      "s_index": 0,
+      "ops": "writeNR",
+      "module": "ble",
+      "name": "resetTogether",
+      "r_index": 0,
+      "s_cmd": 10
+    },
+    {
+      "s_data": 2,
+      "s_index": 50,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rSocTemp",
+      "r_index": 50
+    },
+    {
+      "s_data": 2,
+      "s_index": 51,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rCapacity",
+      "r_index": 51
+    },
+    {
+      "s_data": 2,
+      "s_index": 48,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rInputPower",
+      "r_index": 48
+    },
+    {
+      "s_data": 2,
+      "s_index": 49,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rOutputPower",
+      "r_index": 49
+    },
+    {
+      "s_data": 2,
+      "s_index": 52,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rRemainTime",
+      "r_index": 52
+    },
+    {
+      "s_data": 2,
+      "s_index": 41,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rBool",
+      "r_index": 41
+    },
+    {
+      "s_data": 2,
+      "s_index": 41,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rLogBool",
+      "r_index": 41
+    },
+    {
+      "s_data": 32,
+      "s_index": 63,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rOutputInfo",
+      "r_index": 63
+    },
+    {
+      "s_data": 2,
+      "s_index": 192,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rFunBool",
+      "r_index": 192
+    },
+    {
+      "s_index": 192,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setFunBool"
+    },
+    {
+      "s_data": 2,
+      "s_index": 39,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rErrorCode"
+    },
+    {
+      "s_data": 2,
+      "s_index": 40,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rWarnCode"
+    },
+    {
+      "s_data": 4,
+      "s_index": 218,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wUnixTime",
+      "r_index": 218
+    },
+    {
+      "s_data": 2,
+      "s_index": 43,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rFunSupBool",
+      "r_index": 43
+    },
+    {
+      "s_data": 2,
+      "s_index": 210,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rFrequencySwitchValue",
+      "r_index": 210
+    },
+    {
+      "s_index": 210,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wFrequencySwitchValue"
+    },
+    {
+      "s_data": 2,
+      "s_index": 193,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rFunBool2",
+      "r_index": 193
+    },
+    {
+      "s_index": 193,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setFunBool2"
+    },
+    {
+      "s_index": 30,
+      "ops": "writeNR",
+      "module": "ble",
+      "name": "setBleName"
+    },
+    {
+      "s_index": 1,
+      "ops": "writeNR",
+      "module": "ble",
+      "name": "startSyncLog",
+      "s_cmd": 32
+    },
+    {
+      "module": "ble",
+      "name": "acceptLog",
+      "r_index": 0,
+      "r_cmd": 32
+    },
+    {
+      "s_index": 2,
+      "ops": "writeNR",
+      "module": "ble",
+      "name": "stopSyncLog",
+      "s_cmd": 32
+    },
+    {
+      "s_data": 240,
+      "s_index": 3,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rNotifyError",
+      "r_index": 5,
+      "r_cmd": 32,
+      "retry": 0,
+      "s_cmd": 32
+    },
+    {
+      "s_data": 2,
+      "s_index": 208,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rACInputPowerLimit",
+      "r_index": 208
+    },
+    {
+      "s_index": 208,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wACInputPowerLimit"
+    },
+    {
+      "s_data": 2,
+      "s_index": 212,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rACStandbyTime",
+      "r_index": 212
+    },
+    {
+      "s_index": 212,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wACStandbyTime"
+    },
+    {
+      "s_data": 2,
+      "s_index": 213,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rDCStandbyTime",
+      "r_index": 213
+    },
+    {
+      "s_index": 213,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wDCStandbyTime"
+    },
+    {
+      "s_data": 2,
+      "s_index": 211,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rDeviceStandbyTime",
+      "r_index": 211
+    },
+    {
+      "s_index": 211,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wDeviceStandbyTime"
+    },
+    {
+      "s_data": 2,
+      "s_index": 220,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rScreenDisplayTime",
+      "r_index": 220
+    },
+    {
+      "s_index": 220,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wScreenDisplayTime"
+    },
+    {
+      "s_data": 2,
+      "s_index": 221,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rLedMode",
+      "r_index": 221
+    },
+    {
+      "s_index": 221,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wLedMode"
+    },
+    {
+      "s_data": 2,
+      "s_index": 222,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rAtmosphereMode",
+      "r_index": 222
+    },
+    {
+      "s_index": 222,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wAtmosphereMode"
+    },
+    {
+      "s_index": 223,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wAtmosphereColor1",
+      "r_index": 223
+    },
+    {
+      "s_data": 2,
+      "s_index": 223,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rAtmosphereColor1",
+      "r_index": 223
+    },
+    {
+      "s_index": 224,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wAtmosphereColor2",
+      "r_index": 224
+    },
+    {
+      "s_data": 2,
+      "s_index": 224,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rAtmosphereColor2",
+      "r_index": 224
+    },
+    {
+      "s_index": 225,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wAtmosphereColor3",
+      "r_index": 225
+    },
+    {
+      "s_data": 2,
+      "s_index": 225,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rAtmosphereColor3",
+      "r_index": 225
+    },
+    {
+      "s_index": 226,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wAtmosphereColor4",
+      "r_index": 226
+    },
+    {
+      "s_data": 2,
+      "s_index": 226,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rAtmosphereColor4",
+      "r_index": 226
+    },
+    {
+      "s_data": 2,
+      "s_index": 227,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rRhythmMode",
+      "r_index": 227
+    },
+    {
+      "s_index": 227,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wRhythmMode"
+    },
+    {
+      "s_index": 228,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wRhythmColor1",
+      "r_index": 228
+    },
+    {
+      "s_data": 2,
+      "s_index": 228,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rRhythmColor1",
+      "r_index": 228
+    },
+    {
+      "s_index": 229,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wRhythmColor2",
+      "r_index": 229
+    },
+    {
+      "s_data": 2,
+      "s_index": 229,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rRhythmColor2",
+      "r_index": 229
+    },
+    {
+      "s_index": 230,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wRhythmColor3",
+      "r_index": 230
+    },
+    {
+      "s_data": 2,
+      "s_index": 230,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rRhythmColor3",
+      "r_index": 230
+    },
+    {
+      "s_index": 231,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "wRhythmColor4",
+      "r_index": 231
+    },
+    {
+      "s_data": 2,
+      "s_index": 231,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rRhythmColor4",
+      "r_index": 231
+    },
+    {
+      "s_data": 14,
+      "s_index": 32,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rSN",
+      "r_index": 32
+    },
+    {
+      "s_data": 10,
+      "s_index": 171,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rTemp",
+      "r_index": 171
+    },
+    {
+      "s_data": 2,
+      "s_index": 23,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rMcuV",
+      "r_index": 23
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rMcuPn",
+      "r_index": 16
+    },
+    {
+      "s_data": 2,
+      "s_index": 178,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rBleV",
+      "r_index": 178
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "ble",
+      "name": "rBlePn",
+      "r_index": 16
+    },
+    {
+      "s_data": 2,
+      "s_index": 179,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rPvV",
+      "r_index": 179
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "pv",
+      "name": "rPvPn",
+      "r_index": 16
+    },
+    {
+      "s_data": 2,
+      "s_index": 180,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rInvpV",
+      "r_index": 180
+    },
+    {
+      "s_data": 14,
+      "s_index": 2,
+      "ops": "read",
+      "module": "invp",
+      "name": "rInvpPn",
+      "r_index": 2
+    },
+    {
+      "s_data": 2,
+      "s_index": 181,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rInvsV",
+      "r_index": 181
+    },
+    {
+      "s_data": 14,
+      "s_index": 2,
+      "ops": "read",
+      "module": "invs",
+      "name": "rInvsPn",
+      "r_index": 2
+    },
+    {
+      "s_data": 2,
+      "s_index": 170,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rBmsCount",
+      "r_index": 170
+    },
+    {
+      "s_data": 2,
+      "s_index": 182,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rBms1V",
+      "r_index": 182
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBms1Pn",
+      "r_index": 16
+    },
+    {
+      "s_data": 2,
+      "s_index": 183,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rBms2V",
+      "r_index": 183
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBms2Pn",
+      "r_index": 16,
+      "retry": 0
+    },
+    {
+      "s_data": 2,
+      "s_index": 184,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rBms3V",
+      "r_index": 184
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rBms3Pn",
+      "r_index": 16,
+      "retry": 0
+    },
+    {
+      "s_data": 2,
+      "s_index": 185,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rBms4V",
+      "r_index": 185
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "bms4",
+      "name": "rBms4Pn",
+      "r_index": 16,
+      "retry": 0
+    },
+    {
+      "s_data": 2,
+      "s_index": 186,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rBms5V",
+      "r_index": 186
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "bms5",
+      "name": "rBms5Pn",
+      "r_index": 16,
+      "retry": 0
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBms1Sn",
+      "r_index": 16
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBms2Sn",
+      "r_index": 16
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rBms3Sn",
+      "r_index": 16
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "bms4",
+      "name": "rBms4Sn",
+      "r_index": 16
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "bms5",
+      "name": "rBms5Sn",
+      "r_index": 16
+    },
+    {
+      "s_data": 12,
+      "s_index": 24,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rCPUId",
+      "r_index": 24
+    },
+    {
+      "s_index": 0,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "active",
+      "s_cmd": 87
+    },
+    {
+      "s_data": 12,
+      "s_index": 49,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBattery1Info"
+    },
+    {
+      "s_data": 12,
+      "s_index": 49,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBattery2Info"
+    },
+    {
+      "s_data": 12,
+      "s_index": 49,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rBattery3Info"
+    },
+    {
+      "s_data": 12,
+      "s_index": 49,
+      "ops": "read",
+      "module": "bms4",
+      "name": "rBattery4Info"
+    },
+    {
+      "s_data": 12,
+      "s_index": 49,
+      "ops": "read",
+      "module": "bms5",
+      "name": "rBattery5Info"
+    },
+    {
+      "s_data": 2,
+      "s_index": 139,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsMoreInfo",
+      "r_index": 139
+    },
+    {
+      "s_data": 2,
+      "s_index": 138,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsRemainCapacity",
+      "r_index": 138
+    },
+    {
+      "s_data": 2,
+      "s_index": 32,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsManufactureDate",
+      "r_index": 32
+    },
+    {
+      "s_data": 4,
+      "s_index": 128,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsEnergyThroughput",
+      "r_index": 128
+    },
+    {
+      "s_data": 4,
+      "s_index": 130,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsCapacityThroughput",
+      "r_index": 130
+    },
+    {
+      "s_data": 2,
+      "s_index": 27,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsCycleCount",
+      "r_index": 27
+    },
+    {
+      "s_data": 2,
+      "s_index": 39,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsDeepDischargeCount",
+      "r_index": 39
+    },
+    {
+      "s_data": 4,
+      "s_index": 136,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsExtremeUseTime",
+      "r_index": 136
+    },
+    {
+      "s_data": 4,
+      "s_index": 134,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsExtremeChargeTime",
+      "r_index": 134
+    }
+  ]
+}

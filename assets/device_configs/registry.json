@@ -1,0 +1,596 @@
+[
+  {
+    "serverId": 2,
+    "name": "Ninebot One",
+    "model": "unicycle",
+    "hardwareId": "2",
+    "commandCount": 52,
+    "version": 600002004,
+    "hasCommands": true
+  },
+  {
+    "serverId": 3,
+    "name": "Ninebot-S",
+    "model": "balance",
+    "hardwareId": "3",
+    "commandCount": 84,
+    "version": 600002004,
+    "hasCommands": true
+  },
+  {
+    "serverId": 4,
+    "name": "Ninebot One A1",
+    "model": "unicycle",
+    "hardwareId": "19",
+    "commandCount": 72,
+    "version": 600002004,
+    "hasCommands": true
+  },
+  {
+    "serverId": 6,
+    "name": "Ninebot S-Plus",
+    "model": "balance",
+    "hardwareId": "20",
+    "commandCount": 98,
+    "version": 600003700,
+    "hasCommands": true
+  },
+  {
+    "serverId": 7,
+    "name": "Ninebot Gokart",
+    "model": "kart",
+    "hardwareId": "48",
+    "commandCount": 88,
+    "version": 600002800,
+    "hasCommands": true
+  },
+  {
+    "serverId": 32,
+    "name": "Segway miniLITE",
+    "model": "balance",
+    "hardwareId": "22",
+    "commandCount": 73,
+    "version": 600003100,
+    "hasCommands": true
+  },
+  {
+    "serverId": 33,
+    "name": "Ninebot S 2",
+    "model": "balance",
+    "hardwareId": "30",
+    "commandCount": 98,
+    "version": 600003400,
+    "hasCommands": true
+  },
+  {
+    "serverId": 35,
+    "name": "Ninebot S-Max",
+    "model": "balance",
+    "hardwareId": "24",
+    "commandCount": 85,
+    "version": 600004100,
+    "hasCommands": true
+  },
+  {
+    "serverId": 37,
+    "name": "Ninebot S Nano",
+    "model": "balance",
+    "hardwareId": "25",
+    "commandCount": 83,
+    "version": 600003500,
+    "hasCommands": true
+  },
+  {
+    "serverId": 38,
+    "name": "Ninebot S Nano",
+    "model": "balance",
+    "hardwareId": "27",
+    "commandCount": 82,
+    "version": 600003500,
+    "hasCommands": true
+  },
+  {
+    "serverId": 39,
+    "name": "Ninebot S L",
+    "model": "balance",
+    "hardwareId": "28",
+    "commandCount": 96,
+    "version": 600004500,
+    "hasCommands": true
+  },
+  {
+    "serverId": 42,
+    "name": "Ninebot One Z",
+    "model": "unicycle",
+    "hardwareId": "18",
+    "commandCount": 69,
+    "version": 600002005,
+    "hasCommands": true
+  },
+  {
+    "serverId": 52,
+    "name": "Ninebot KickScooter ES",
+    "model": "scooter",
+    "hardwareId": "33",
+    "commandCount": 84,
+    "version": 600002010,
+    "hasCommands": true
+  },
+  {
+    "serverId": 54,
+    "name": "Ninebot KickScooter Max",
+    "model": "scooter",
+    "hardwareId": "36",
+    "commandCount": 68,
+    "version": 600002010,
+    "hasCommands": true
+  },
+  {
+    "serverId": 55,
+    "name": "Ninebot KickScooter E",
+    "model": "scooter",
+    "hardwareId": "39",
+    "commandCount": 106,
+    "version": 600003400,
+    "hasCommands": true
+  },
+  {
+    "serverId": 58,
+    "name": "Ninebot KickScooter Air",
+    "model": "scooter",
+    "hardwareId": "35",
+    "commandCount": 55,
+    "version": 600002010,
+    "hasCommands": true
+  },
+  {
+    "serverId": 72,
+    "name": "Ninebot Gokart Pro",
+    "model": "kart",
+    "hardwareId": "49",
+    "commandCount": 93,
+    "version": 600004800,
+    "hasCommands": true
+  },
+  {
+    "serverId": 73,
+    "name": "Ninebot Gokart Pro Automobili Lamborghini Edition",
+    "model": "kart",
+    "hardwareId": "50",
+    "commandCount": 100,
+    "version": 600004100,
+    "hasCommands": true
+  },
+  {
+    "serverId": 74,
+    "name": "Segway Gokart Pro Bumblebee Limited Edition",
+    "model": "kart",
+    "hardwareId": "54",
+    "commandCount": 94,
+    "version": 600003900,
+    "hasCommands": true
+  },
+  {
+    "serverId": 75,
+    "name": "Segway Gokart Pro Optimus Prime Limited Edition",
+    "model": "kart",
+    "hardwareId": "55",
+    "commandCount": 95,
+    "version": 600004000,
+    "hasCommands": true
+  },
+  {
+    "serverId": 76,
+    "name": "Segway Gokart Pro 2",
+    "model": "kart",
+    "hardwareId": "56",
+    "commandCount": 116,
+    "version": 600003800,
+    "hasCommands": true
+  },
+  {
+    "serverId": 77,
+    "name": "Segway Gokart Kit 2",
+    "model": "kart",
+    "hardwareId": "57",
+    "commandCount": 102,
+    "version": 600002900,
+    "hasCommands": true
+  },
+  {
+    "serverId": 81,
+    "name": "Segway eScooter E",
+    "model": "motor",
+    "hardwareId": "66",
+    "commandCount": 512,
+    "version": 600002700,
+    "hasCommands": true
+  },
+  {
+    "serverId": 105,
+    "name": "Segway eMoped C",
+    "model": "motor",
+    "hardwareId": "67",
+    "commandCount": 511,
+    "version": 600002400,
+    "hasCommands": true
+  },
+  {
+    "serverId": 107,
+    "name": "Ninebot Mecha Kit",
+    "model": "armor",
+    "hardwareId": "51",
+    "commandCount": 104,
+    "version": 600002004,
+    "hasCommands": true
+  },
+  {
+    "serverId": 110,
+    "name": "Segway eMoped B",
+    "model": "motor",
+    "hardwareId": "73",
+    "commandCount": 511,
+    "version": 600002900,
+    "hasCommands": true
+  },
+  {
+    "serverId": 111,
+    "name": "Segway eMoped B",
+    "model": "motor",
+    "hardwareId": "86",
+    "commandCount": 511,
+    "version": 600002800,
+    "hasCommands": true
+  },
+  {
+    "serverId": 351,
+    "name": "Ninebot S-Max",
+    "model": "balance",
+    "hardwareId": "26",
+    "commandCount": 92,
+    "version": 600003400,
+    "hasCommands": true
+  },
+  {
+    "serverId": 521,
+    "name": "Ninebot Kickscooter F",
+    "model": "scooter",
+    "hardwareId": "44",
+    "commandCount": 63,
+    "version": 600003200,
+    "hasCommands": true
+  },
+  {
+    "serverId": 523,
+    "name": "Segway GT1",
+    "model": "scooter",
+    "hardwareId": "112",
+    "commandCount": 86,
+    "version": 600003200,
+    "hasCommands": true
+  },
+  {
+    "serverId": 524,
+    "name": "Segway GT2",
+    "model": "scooter",
+    "hardwareId": "113",
+    "commandCount": 83,
+    "version": 600003300,
+    "hasCommands": true
+  },
+  {
+    "serverId": 525,
+    "name": "Ninebot Kickscooter D18",
+    "model": "scooter",
+    "hardwareId": "116",
+    "commandCount": 46,
+    "version": 600002010,
+    "hasCommands": true
+  },
+  {
+    "serverId": 526,
+    "name": "Ninebot Kickscooter D28",
+    "model": "scooter",
+    "hardwareId": "114",
+    "commandCount": 47,
+    "version": 600002010,
+    "hasCommands": true
+  },
+  {
+    "serverId": 527,
+    "name": "Ninebot Kickscooter D38",
+    "model": "scooter",
+    "hardwareId": "115",
+    "commandCount": 46,
+    "version": 600002010,
+    "hasCommands": true
+  },
+  {
+    "serverId": 528,
+    "name": "Segway P65",
+    "model": "scooter",
+    "hardwareId": "118",
+    "commandCount": 91,
+    "version": 600002800,
+    "hasCommands": true
+  },
+  {
+    "serverId": 529,
+    "name": "Segway P100S",
+    "model": "scooter",
+    "hardwareId": "119",
+    "commandCount": 91,
+    "version": 600002800,
+    "hasCommands": true
+  },
+  {
+    "serverId": 530,
+    "name": "Ninebot Kickscooter F65",
+    "model": "scooter",
+    "hardwareId": "45",
+    "commandCount": 59,
+    "version": 600002700,
+    "hasCommands": true
+  },
+  {
+    "serverId": 531,
+    "name": "Ninebot Kickscooter G65",
+    "model": "scooter",
+    "hardwareId": "120",
+    "commandCount": 63,
+    "version": 600002600,
+    "hasCommands": true
+  },
+  {
+    "serverId": 532,
+    "name": "Ninebot Kickscooter UiFi 1",
+    "model": "scooter",
+    "hardwareId": "121",
+    "commandCount": 74,
+    "version": 600002008,
+    "hasCommands": true
+  },
+  {
+    "serverId": 533,
+    "name": "Ninebot Kickscooter UiFi 1 Pro",
+    "model": "scooter",
+    "hardwareId": "122",
+    "commandCount": 74,
+    "version": 600002008,
+    "hasCommands": true
+  },
+  {
+    "serverId": 534,
+    "name": "Ninebot Kickscooter F",
+    "model": "scooter",
+    "hardwareId": "123",
+    "commandCount": 55,
+    "version": 600002010,
+    "hasCommands": true
+  },
+  {
+    "serverId": 535,
+    "name": "Ninebot Kickscooter C2 Pro",
+    "model": "scooter",
+    "hardwareId": "124",
+    "commandCount": 70,
+    "version": 600004100,
+    "hasCommands": true
+  },
+  {
+    "serverId": 536,
+    "name": "Ninebot Kickscooter E2/E2 Plus",
+    "model": "scooter",
+    "hardwareId": "125",
+    "commandCount": 69,
+    "version": 600005000,
+    "hasCommands": true
+  },
+  {
+    "serverId": 537,
+    "name": "Ninebot Kickscooter MAX G2",
+    "model": "scooter",
+    "hardwareId": "131",
+    "commandCount": 121,
+    "version": 600005100,
+    "hasCommands": true
+  },
+  {
+    "serverId": 538,
+    "name": "Ninebot Kickscooter F2",
+    "model": "scooter",
+    "hardwareId": "127",
+    "commandCount": 104,
+    "version": 600006900,
+    "hasCommands": true
+  },
+  {
+    "serverId": 539,
+    "name": "Ninebot Kickscooter F2 Plus",
+    "model": "scooter",
+    "hardwareId": "128",
+    "commandCount": 104,
+    "version": 600004500,
+    "hasCommands": true
+  },
+  {
+    "serverId": 540,
+    "name": "Ninebot Kickscooter F2 Pro",
+    "model": "scooter",
+    "hardwareId": "129",
+    "commandCount": 104,
+    "version": 600007000,
+    "hasCommands": true
+  },
+  {
+    "serverId": 541,
+    "name": "Ninebot eKickScooter E2 Pro",
+    "model": "scooter",
+    "hardwareId": "141",
+    "commandCount": 107,
+    "version": 600006100,
+    "hasCommands": true
+  },
+  {
+    "serverId": 544,
+    "name": "Segway  ST2 Pro",
+    "model": "scooter",
+    "hardwareId": "136",
+    "commandCount": 83,
+    "version": 600003200,
+    "hasCommands": true
+  },
+  {
+    "serverId": 820,
+    "name": "Segway eScooter N",
+    "model": "motor",
+    "hardwareId": "89",
+    "commandCount": 512,
+    "version": 600002600,
+    "hasCommands": true
+  },
+  {
+    "serverId": 1071,
+    "name": "Ninebot Mecha Kit",
+    "model": "armor",
+    "hardwareId": "52",
+    "commandCount": 104,
+    "version": 600002004,
+    "hasCommands": true
+  },
+  {
+    "serverId": 1110,
+    "name": "Ninebot Engine Speaker",
+    "model": "speaker",
+    "hardwareId": "242",
+    "commandCount": 5,
+    "version": 600002003,
+    "hasCommands": true
+  },
+  {
+    "serverId": 1111,
+    "name": "Segway-Ninebot Engine Speaker 2",
+    "model": "speaker",
+    "hardwareId": "244",
+    "commandCount": 5,
+    "version": 600002002,
+    "hasCommands": true
+  },
+  {
+    "serverId": 1112,
+    "name": "Segway Portable Power Station Cube",
+    "model": "cube",
+    "hardwareId": "208",
+    "commandCount": 104,
+    "version": 600002006,
+    "hasCommands": true
+  },
+  {
+    "serverId": 10256,
+    "name": "Segway ZT3 Pro",
+    "model": "scooter",
+    "hardwareId": "256",
+    "commandCount": 191,
+    "version": 600006500,
+    "hasCommands": true
+  },
+  {
+    "serverId": 10257,
+    "name": "Segway SuperScooter GT3",
+    "model": "scooter",
+    "hardwareId": "257",
+    "commandCount": 192,
+    "version": 600009700,
+    "hasCommands": true
+  },
+  {
+    "serverId": 10258,
+    "name": "Segway eKickscooter Ninebot MAX G3/MAX G3 Plus",
+    "model": "scooter",
+    "hardwareId": "258",
+    "commandCount": 192,
+    "version": 600014500,
+    "hasCommands": true
+  },
+  {
+    "serverId": 10259,
+    "name": "eKickScooter F3",
+    "model": "scooter",
+    "hardwareId": "259",
+    "commandCount": 192,
+    "version": 600011000,
+    "hasCommands": true
+  },
+  {
+    "serverId": 10261,
+    "name": "eKickScooter E3 Series",
+    "model": "scooter",
+    "hardwareId": "261",
+    "commandCount": 145,
+    "version": 600010100,
+    "hasCommands": true
+  },
+  {
+    "serverId": 14102,
+    "name": "SEGWAY E150S / SEGWAY E250S",
+    "model": "motor",
+    "hardwareId": "4102",
+    "commandCount": 512,
+    "version": 600008600,
+    "hasCommands": true
+  },
+  {
+    "serverId": 20752,
+    "name": "Lumina-500",
+    "model": "cube",
+    "hardwareId": "10752",
+    "commandCount": 104,
+    "version": 600002023,
+    "hasCommands": true
+  },
+  {
+    "serverId": 26384,
+    "name": "Segway E-bike Myon",
+    "model": "assisted_ebike",
+    "hardwareId": "16384",
+    "commandCount": 165,
+    "version": 600014200,
+    "hasCommands": true
+  },
+  {
+    "serverId": 26640,
+    "name": "Xafari",
+    "model": "assisted_ebike",
+    "hardwareId": "16640",
+    "commandCount": 159,
+    "version": 600011700,
+    "hasCommands": true
+  },
+  {
+    "serverId": 27152,
+    "name": "Segway Xyber",
+    "model": "assisted_ebike",
+    "hardwareId": "17152",
+    "commandCount": 166,
+    "version": 600018300,
+    "hasCommands": true
+  },
+  {
+    "serverId": 27153,
+    "name": "Segway E-bike Muxi",
+    "model": "assisted_ebike",
+    "hardwareId": "17153",
+    "commandCount": 166,
+    "version": 600005500,
+    "hasCommands": true
+  },
+  {
+    "serverId": 27410,
+    "name": "九号引擎音箱II",
+    "model": "speaker",
+    "hardwareId": "17410",
+    "commandCount": 5,
+    "version": 600003000,
+    "hasCommands": true
+  }
+]

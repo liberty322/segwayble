@@ -1,0 +1,568 @@
+{
+  "name": "device_commands",
+  "defaultConfigs": {
+    "timeout": 1000,
+    "retry": 5,
+    "cmd_read": 1,
+    "cmd_readACK": 4,
+    "cmd_write": 2,
+    "cmd_writeACK": 5,
+    "cmd_writeNR": 3
+  },
+  "commands": [
+    {
+      "name": "iapBegin",
+      "s_cmd": 7,
+      "s_index": 0
+    },
+    {
+      "name": "iapWrite",
+      "s_cmd": 8,
+      "s_index": 0
+    },
+    {
+      "name": "iapCRC",
+      "s_cmd": 9,
+      "s_index": 0
+    },
+    {
+      "name": "firmwareReset",
+      "s_cmd": 10,
+      "s_index": 0,
+      "s_data": 0,
+      "r_index": 0
+    },
+    {
+      "name": "rActDate",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 94,
+      "r_index": 94,
+      "s_data": 2
+    },
+    {
+      "name": "active",
+      "module": "dash",
+      "s_cmd": 87,
+      "s_index": 0,
+      "ops": "writeNR"
+    },
+    {
+      "name": "rCPUId",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 218,
+      "r_index": 218,
+      "s_data": 12
+    },
+    {
+      "name": "rDisPN",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 80,
+      "r_index": 80,
+      "s_data": 14
+    },
+    {
+      "name": "rPN",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 80,
+      "r_index": 80,
+      "s_data": 14
+    },
+    {
+      "name": "rCtrlV",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 40,
+      "s_data": 2,
+      "r_index": 40
+    },
+    {
+      "name": "rDashV",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 26,
+      "s_data": 2,
+      "r_index": 26
+    },
+    {
+      "name": "rBmsV",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 48,
+      "s_data": 2,
+      "r_index": 48
+    },
+    {
+      "name": "rBleV",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 92,
+      "s_data": 2,
+      "r_index": 92
+    },
+    {
+      "name": "rCtrlV",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 40,
+      "s_data": 2,
+      "r_index": 40
+    },
+    {
+      "name": "rBFGV",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 61,
+      "s_data": 2,
+      "r_index": 61
+    },
+    {
+      "name": "rBool",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 29,
+      "r_index": 29,
+      "s_data": 2
+    },
+    {
+      "name": "unlock",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 112,
+      "r_index": 112,
+      "s_value": "$secret"
+    },
+    {
+      "name": "lock",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 113,
+      "r_index": 113,
+      "s_value": "$secret"
+    },
+    {
+      "name": "openNfc",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 119,
+      "s_value": "$secret"
+    },
+    {
+      "name": "closeNfc",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 118,
+      "s_value": "$secret"
+    },
+    {
+      "name": "openPwd",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 117,
+      "r_index": 117,
+      "s_value": "$secret"
+    },
+    {
+      "name": "closePwd",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 116,
+      "r_index": 116,
+      "s_value": "$secret"
+    },
+    {
+      "name": "openLock",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 124,
+      "r_index": 124,
+      "s_value": "$secret"
+    },
+    {
+      "name": "closeLock",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 125,
+      "r_index": 125,
+      "s_value": "$secret"
+    },
+    {
+      "name": "openAlarm",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 122,
+      "r_index": 122,
+      "s_value": "$secret"
+    },
+    {
+      "name": "closeAlarm",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 123,
+      "r_index": 123,
+      "s_value": "$secret"
+    },
+    {
+      "name": "rSN",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 16,
+      "r_index": 16,
+      "s_data": 14
+    },
+    {
+      "name": "rLeftMileage",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 37,
+      "s_data": 2,
+      "r_index": 37
+    },
+    {
+      "name": "rBattery",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 181,
+      "s_data": 2,
+      "r_index": 181
+    },
+    {
+      "name": "rMileage",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 183,
+      "s_data": 4,
+      "r_index": 183
+    },
+    {
+      "name": "setDecMode",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 131
+    },
+    {
+      "name": "readDecMode",
+      "module": "dash",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 131,
+      "r_index": 131
+    },
+    {
+      "name": "rDelayCloseLight",
+      "module": "dash",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 133,
+      "r_index": 133
+    },
+    {
+      "name": "setDelayCloseLight",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 133
+    },
+    {
+      "name": "rFunBool",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 130,
+      "r_index": 130,
+      "s_data": 2
+    },
+    {
+      "name": "setFunBool",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 130
+    },
+    {
+      "name": "rSpeed",
+      "module": "dash",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 38,
+      "r_index": 38
+    },
+    {
+      "name": "rMaxPower",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 140,
+      "r_index": 140,
+      "s_data": 2
+    },
+    {
+      "name": "setMaxPower",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 140
+    },
+    {
+      "name": "rMcuTemp",
+      "module": "dash",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 66
+    },
+    {
+      "name": "rRatedSpeed",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 72,
+      "s_data": 2,
+      "r_index": 72
+    },
+    {
+      "name": "rAccMode",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 135,
+      "s_data": 2,
+      "r_index": 135
+    },
+    {
+      "name": "setAccMode",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 135,
+      "r_index": 135
+    },
+    {
+      "name": "rGearValue",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 137,
+      "s_data": 2,
+      "r_index": 137
+    },
+    {
+      "name": "setGearValue",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 137,
+      "r_index": 137
+    },
+    {
+      "name": "rAutoPTime",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 138,
+      "s_data": 2
+    },
+    {
+      "name": "setAutoPTime",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_index": 138
+    },
+    {
+      "name": "rStateBool",
+      "module": "ble",
+      "ops": "read",
+      "s_index": 82,
+      "s_data": 2
+    },
+    {
+      "name": "wStartBond",
+      "module": "ble",
+      "ops": "write",
+      "s_cmd": 110,
+      "r_cmd": 110,
+      "s_index": 30
+    },
+    {
+      "name": "triggerHidBond",
+      "module": "ble",
+      "s_cmd": 110,
+      "r_cmd": 110,
+      "s_index": 14
+    },
+    {
+      "name": "resetHID",
+      "module": "ble",
+      "ops": "write",
+      "s_cmd": 110,
+      "r_cmd": 110,
+      "s_index": 13
+    },
+    {
+      "name": "clearHIDBond",
+      "module": "ble",
+      "ops": "write",
+      "s_cmd": 110,
+      "r_cmd": 110,
+      "s_index": 9
+    },
+    {
+      "name": "clearAllHIDBond",
+      "module": "ble",
+      "ops": "write",
+      "s_cmd": 110,
+      "r_cmd": 110,
+      "s_index": 12
+    },
+    {
+      "name": "setHIDRSSI",
+      "module": "ble",
+      "ops": "write",
+      "s_cmd": 110,
+      "r_cmd": 110,
+      "s_index": 2
+    },
+    {
+      "name": "getHIDRSSI",
+      "module": "ble",
+      "ops": "write",
+      "s_cmd": 110,
+      "r_cmd": 110,
+      "s_index": 11
+    },
+    {
+      "name": "rHidBool",
+      "module": "ble",
+      "ops": "read",
+      "s_index": 80,
+      "s_data": 2
+    },
+    {
+      "name": "setPwd",
+      "module": "dash",
+      "s_cmd": 102,
+      "s_index": 0,
+      "ops": "write"
+    },
+    {
+      "name": "rRand",
+      "module": "dash",
+      "ops": "read",
+      "s_data": 6,
+      "s_index": 228,
+      "r_index": 228
+    },
+    {
+      "name": "rFlag",
+      "module": "dash",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 231,
+      "r_index": 231
+    },
+    {
+      "name": "rBmsSn",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 167,
+      "s_data": 14,
+      "retry": 0
+    },
+    {
+      "name": "rBatteryInfo",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 160,
+      "s_data": 10
+    },
+    {
+      "name": "rBatterySN",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 167,
+      "s_data": 14
+    },
+    {
+      "name": "rVerDC",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 165,
+      "s_data": 4
+    },
+    {
+      "name": "rNfcEmpty",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 67,
+      "s_data": 2,
+      "r_index": 67
+    },
+    {
+      "name": "writeNfcEnter",
+      "module": "dash",
+      "s_cmd": 104,
+      "r_cmd": 104,
+      "s_index": 5,
+      "ops": "write",
+      "timeout": 60000
+    },
+    {
+      "name": "writeNfcDelete",
+      "module": "dash",
+      "s_cmd": 104,
+      "r_cmd": 104,
+      "s_index": 6,
+      "ops": "write",
+      "timeout": 10000
+    },
+    {
+      "name": "writeNfcExit",
+      "module": "dash",
+      "s_cmd": 104,
+      "r_cmd": 104,
+      "s_index": 10,
+      "ops": "write"
+    },
+    {
+      "name": "clearAllKeys",
+      "module": "dash",
+      "ops": "writeNR",
+      "s_cmd": 128,
+      "s_index": 0,
+      "s_value": "$secret"
+    },
+    {
+      "name": "rErrorCode",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 27,
+      "s_data": 2
+    },
+    {
+      "name": "rWarnCode",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 28,
+      "s_data": 2
+    },
+    {
+      "name": "rBMSCur",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 162,
+      "s_data": 2
+    },
+    {
+      "name": "rBMSVolt",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 163,
+      "s_data": 2
+    },
+    {
+      "name": "rSingleMileage",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 47,
+      "s_data": 2
+    },
+    {
+      "name": "rRunningTime",
+      "module": "dash",
+      "ops": "read",
+      "s_index": 58,
+      "s_data": 2
+    }
+  ]
+}

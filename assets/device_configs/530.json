@@ -1,0 +1,447 @@
+{
+  "name": "device_commands",
+  "defaultConfigs": {
+    "timeout": 1000,
+    "retry": 5,
+    "cmd_read": 1,
+    "cmd_readACK": 4,
+    "cmd_write": 2,
+    "cmd_writeACK": 5,
+    "cmd_writeNR": 3
+  },
+  "commands": [
+    {
+      "name": "iapBegin",
+      "s_cmd": 7,
+      "s_index": 0
+    },
+    {
+      "name": "iapWrite",
+      "s_cmd": 8,
+      "s_index": 0
+    },
+    {
+      "name": "iapCRC",
+      "s_cmd": 9,
+      "s_index": 0
+    },
+    {
+      "name": "firmwareReset",
+      "s_cmd": 10,
+      "s_index": 0,
+      "s_data": 0,
+      "r_index": 0
+    },
+    {
+      "name": "rActDate",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 105,
+      "r_index": 105
+    },
+    {
+      "name": "active",
+      "module": "ctrl",
+      "s_cmd": 87,
+      "s_index": 0,
+      "ops": "writeNR"
+    },
+    {
+      "name": "rCtrlV",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 26,
+      "s_data": 2,
+      "r_index": 26
+    },
+    {
+      "name": "rCPUId",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 218,
+      "r_index": 218,
+      "s_data": 12
+    },
+    {
+      "name": "rBmsV",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 103,
+      "s_data": 2,
+      "r_index": 103
+    },
+    {
+      "name": "rBleV",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 104,
+      "s_data": 2,
+      "r_index": 104
+    },
+    {
+      "name": "rBool",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 178,
+      "s_data": 2,
+      "r_index": 178
+    },
+    {
+      "name": "lock",
+      "module": "ctrl",
+      "ops": "write",
+      "s_index": 112,
+      "s_data": 1,
+      "r_index": 112
+    },
+    {
+      "name": "unlock",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 113,
+      "s_data": 1
+    },
+    {
+      "name": "rSN",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 16,
+      "s_data": 14,
+      "r_index": 16
+    },
+    {
+      "name": "rBodyTemp",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 62,
+      "s_data": 2,
+      "r_index": 62
+    },
+    {
+      "name": "rLeftMileage",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 37,
+      "s_data": 2,
+      "r_index": 37
+    },
+    {
+      "name": "rBattery",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 34,
+      "s_data": 2,
+      "r_index": 34
+    },
+    {
+      "name": "rMileage",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 183,
+      "s_data": 4,
+      "r_index": 183
+    },
+    {
+      "name": "readCruice",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 124,
+      "s_data": 2,
+      "r_index": 124
+    },
+    {
+      "name": "setCruice",
+      "module": "ctrl",
+      "ops": "write",
+      "s_index": 124,
+      "s_data": 1
+    },
+    {
+      "name": "readDecMode",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 123,
+      "s_data": 2,
+      "r_index": 123
+    },
+    {
+      "name": "setDecMode",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 123
+    },
+    {
+      "name": "rFunBool",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 125,
+      "r_index": 125
+    },
+    {
+      "name": "setFunBool",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 125
+    },
+    {
+      "name": "rSpeed",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 38,
+      "r_index": 38
+    },
+    {
+      "name": "rBatteryInfo",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 49,
+      "r_index": 49,
+      "s_data": 24
+    },
+    {
+      "name": "rBatterySN",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 16,
+      "s_data": 18,
+      "r_index": 16
+    },
+    {
+      "name": "rEbsStrength",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 115,
+      "s_data": 2,
+      "r_index": 115
+    },
+    {
+      "name": "wEbsStrength",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 115
+    },
+    {
+      "name": "rPedestrianMode",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 119,
+      "s_data": 2,
+      "r_index": 119
+    },
+    {
+      "name": "wPedestrianMode",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 119,
+      "s_data": 0
+    },
+    {
+      "name": "rStartSpeed",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 126,
+      "r_index": 126
+    },
+    {
+      "name": "wStartSpeed",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 126
+    },
+    {
+      "name": "rMaxPower",
+      "module": "bms",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 63,
+      "r_index": 63
+    },
+    {
+      "name": "setMaxPower",
+      "module": "bms",
+      "ops": "write",
+      "s_index": 63
+    },
+    {
+      "name": "rRand",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 6,
+      "s_index": 228,
+      "r_index": 228
+    },
+    {
+      "name": "rFlag",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 231,
+      "r_index": 231
+    },
+    {
+      "name": "rVerDC",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 23,
+      "s_data": 4
+    },
+    {
+      "name": "queryInfo",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 176,
+      "s_data": 6,
+      "r_index": 176
+    },
+    {
+      "name": "queryVolume",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 245,
+      "r_index": 245
+    },
+    {
+      "name": "setVolume",
+      "module": "ctrl",
+      "ops": "writeNR",
+      "s_index": 245
+    },
+    {
+      "name": "queryCtrVol",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 51,
+      "r_index": 51,
+      "s_data": 4
+    },
+    {
+      "name": "queryErrAlermCode",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 176,
+      "s_data": 4,
+      "r_index": 176
+    },
+    {
+      "name": "queryBmsPrdDate",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 32,
+      "s_data": 2,
+      "r_index": 32
+    },
+    {
+      "name": "queryBmsLoop",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 27,
+      "s_data": 4,
+      "r_index": 27
+    },
+    {
+      "name": "querySigRidTime",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 59,
+      "r_index": 59
+    },
+    {
+      "name": "querySigRidMil",
+      "module": "ctrl",
+      "ops": "read",
+      "s_data": 2,
+      "s_index": 47,
+      "r_index": 47
+    },
+    {
+      "name": "rErrorCode",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 176,
+      "s_data": 2
+    },
+    {
+      "name": "rWarnCode",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 177,
+      "s_data": 2
+    },
+    {
+      "name": "rBMSCur",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 51,
+      "s_data": 2
+    },
+    {
+      "name": "rBMSVolt",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 52,
+      "s_data": 2
+    },
+    {
+      "name": "rSingleMileage",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 185,
+      "s_data": 2
+    },
+    {
+      "name": "rRunningTime",
+      "module": "ctrl",
+      "ops": "read",
+      "s_index": 186,
+      "s_data": 2
+    },
+    {
+      "name": "rBmsDate",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 32,
+      "s_data": 2
+    },
+    {
+      "name": "rBmsInfoLowFrequence",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 16,
+      "s_data": 18
+    },
+    {
+      "name": "rBmsInfoLowFrequence2",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 27,
+      "s_data": 4
+    },
+    {
+      "name": "rBmsInfoHighFrequence",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 49,
+      "s_data": 8
+    },
+    {
+      "name": "rBmsTemp",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 53,
+      "s_data": 2
+    },
+    {
+      "name": "rBmsCellVol",
+      "module": "bms",
+      "ops": "read",
+      "s_index": 64,
+      "s_data": 20
+    }
+  ]
+}

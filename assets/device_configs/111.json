@@ -1,0 +1,4083 @@
+{
+  "defaultConfigs": {
+    "cmd_writeNR": 3,
+    "cmd_writeACK": 5,
+    "cmd_readACK": 4,
+    "cmd_read": 1,
+    "timeout": 1000,
+    "retry": 5,
+    "cmd_write": 2
+  },
+  "name": "device_commands",
+  "commands": [
+    {
+      "s_data": 2,
+      "s_index": 37,
+      "ops": "read",
+      "module": "dis",
+      "name": "rLeftMileage",
+      "r_index": 37
+    },
+    {
+      "s_value": "$ident",
+      "s_index": 115,
+      "ops": "writeNR",
+      "module": "ble",
+      "name": "openTrunk",
+      "r_index": 115,
+      "s_cmd": 100
+    },
+    {
+      "s_data": -1,
+      "s_value": "$ident",
+      "s_index": 78,
+      "module": "ble",
+      "name": "openAcc",
+      "timeout": 1500,
+      "s_cmd": 100
+    },
+    {
+      "s_data": -1,
+      "s_value": "$ident",
+      "s_index": 70,
+      "ops": "writeNR",
+      "module": "ble",
+      "name": "closeAcc",
+      "s_cmd": 100
+    },
+    {
+      "s_index": 0,
+      "name": "iapBegin",
+      "s_cmd": 7
+    },
+    {
+      "s_index": 0,
+      "name": "iapWrite",
+      "s_cmd": 8
+    },
+    {
+      "s_index": 0,
+      "name": "iapCRC",
+      "s_cmd": 9
+    },
+    {
+      "s_data": 0,
+      "s_index": 0,
+      "name": "firmwareReset",
+      "r_index": 0,
+      "s_cmd": 10
+    },
+    {
+      "s_data": 2,
+      "s_index": 26,
+      "ops": "read",
+      "module": "dis",
+      "name": "rDisV",
+      "r_index": 26
+    },
+    {
+      "s_data": 2,
+      "s_index": 40,
+      "ops": "read",
+      "module": "dis",
+      "name": "rMCUV",
+      "r_index": 40
+    },
+    {
+      "s_data": 2,
+      "s_index": 48,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBms1V",
+      "r_index": 48,
+      "retry": 0
+    },
+    {
+      "s_data": 2,
+      "s_index": 49,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBms2V",
+      "r_index": 49,
+      "retry": 0
+    },
+    {
+      "s_data": 2,
+      "s_index": 50,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBms3V",
+      "r_index": 50,
+      "retry": 0
+    },
+    {
+      "s_data": 2,
+      "s_index": 76,
+      "ops": "read",
+      "module": "dis",
+      "name": "rEcuV",
+      "r_index": 76
+    },
+    {
+      "s_data": 2,
+      "s_index": 61,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBFGV",
+      "r_index": 61
+    },
+    {
+      "s_data": 2,
+      "s_index": 208,
+      "ops": "read",
+      "module": "dis",
+      "name": "rABSV",
+      "r_index": 208
+    },
+    {
+      "s_data": 2,
+      "s_index": 210,
+      "ops": "read",
+      "module": "dis",
+      "name": "rHEPV",
+      "r_index": 210
+    },
+    {
+      "s_data": 2,
+      "s_index": 93,
+      "ops": "read",
+      "module": "dis",
+      "name": "rCHGV",
+      "r_index": 93
+    },
+    {
+      "s_data": 14,
+      "s_index": 17,
+      "ops": "read",
+      "module": "chg",
+      "name": "rCHGPN",
+      "r_index": 17,
+      "retry": 0
+    },
+    {
+      "s_data": 2,
+      "s_index": 1,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftV"
+    },
+    {
+      "s_data": 16,
+      "s_index": 2,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftPN",
+      "r_index": 2
+    },
+    {
+      "s_data": 14,
+      "s_index": 80,
+      "ops": "read",
+      "module": "dis",
+      "name": "rDisPN",
+      "r_index": 80
+    },
+    {
+      "s_data": 14,
+      "s_index": 40,
+      "ops": "read",
+      "module": "ecu",
+      "name": "rECUPN",
+      "r_index": 40
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rMCUPN",
+      "r_index": 16,
+      "retry": 0
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rbms1PN",
+      "r_index": 16,
+      "retry": 0
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rbms2PN",
+      "r_index": 16,
+      "retry": 0
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rbms3PN",
+      "r_index": 16,
+      "retry": 0
+    },
+    {
+      "s_data": 2,
+      "s_index": 208,
+      "ops": "read",
+      "module": "dis",
+      "name": "rABSFV",
+      "r_index": 208
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "abs-f",
+      "name": "rABSFPN",
+      "r_index": 16,
+      "timeout": 500,
+      "retry": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 80,
+      "ops": "read",
+      "module": "ble",
+      "name": "rFunSupBool",
+      "r_index": 80,
+      "retry": 3
+    },
+    {
+      "s_index": 1,
+      "ops": "write",
+      "module": "ble",
+      "name": "getInfo",
+      "r_index": 1,
+      "retry": 1,
+      "s_cmd": 111
+    },
+    {
+      "s_data": -1,
+      "s_index": 2,
+      "ops": "write",
+      "module": "ble",
+      "name": "unlockEnable",
+      "s_cmd": 111
+    },
+    {
+      "s_data": -1,
+      "s_index": 3,
+      "ops": "write",
+      "module": "ble",
+      "name": "rssiCali",
+      "s_cmd": 111
+    },
+    {
+      "s_data": -1,
+      "s_index": 4,
+      "ops": "write",
+      "module": "ble",
+      "name": "rssiSet",
+      "s_cmd": 111
+    },
+    {
+      "s_data": -1,
+      "s_index": 5,
+      "ops": "write",
+      "module": "ble",
+      "name": "rssiGet",
+      "s_cmd": 111
+    },
+    {
+      "s_data": -1,
+      "s_index": 12,
+      "ops": "write",
+      "module": "ble",
+      "name": "setConnectMode",
+      "s_cmd": 111
+    },
+    {
+      "s_data": -1,
+      "s_index": 13,
+      "ops": "write",
+      "module": "ble",
+      "name": "getConnectMode",
+      "s_cmd": 111
+    },
+    {
+      "s_data": 2,
+      "s_index": 82,
+      "ops": "read",
+      "module": "ecu",
+      "name": "rStateBool"
+    },
+    {
+      "s_index": 30,
+      "ops": "write",
+      "module": "ecu",
+      "name": "wStartBond",
+      "r_cmd": 110,
+      "s_cmd": 110
+    },
+    {
+      "s_index": 14,
+      "module": "ecu",
+      "name": "triggerHidBond",
+      "r_cmd": 110,
+      "s_cmd": 110
+    },
+    {
+      "s_index": 13,
+      "ops": "write",
+      "module": "ecu",
+      "name": "resetHID",
+      "r_cmd": 110,
+      "s_cmd": 110
+    },
+    {
+      "s_index": 9,
+      "ops": "write",
+      "module": "ecu",
+      "name": "clearHIDBond",
+      "r_cmd": 110,
+      "s_cmd": 110
+    },
+    {
+      "s_index": 12,
+      "ops": "write",
+      "module": "ecu",
+      "name": "clearAllHIDBond",
+      "r_cmd": 110,
+      "s_cmd": 110
+    },
+    {
+      "s_index": 2,
+      "ops": "write",
+      "module": "ecu",
+      "name": "setHIDRSSI",
+      "r_cmd": 110,
+      "s_cmd": 110
+    },
+    {
+      "s_index": 11,
+      "ops": "write",
+      "module": "ecu",
+      "name": "getHIDRSSI",
+      "r_cmd": 110,
+      "s_cmd": 110
+    },
+    {
+      "s_data": 2,
+      "s_index": 134,
+      "ops": "read",
+      "module": "dis",
+      "name": "rTimeZone",
+      "r_index": 134
+    },
+    {
+      "s_index": 134,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setTimeZone"
+    },
+    {
+      "s_data": 2,
+      "s_index": 124,
+      "ops": "read",
+      "module": "dis",
+      "name": "rCTLBool2",
+      "r_index": 124
+    },
+    {
+      "s_index": 125,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setFunBool"
+    },
+    {
+      "s_data": 2,
+      "s_index": 125,
+      "ops": "read",
+      "module": "dis",
+      "name": "rFunBool",
+      "r_index": 125
+    },
+    {
+      "s_data": 2,
+      "s_index": 72,
+      "ops": "read",
+      "module": "dis",
+      "name": "rRatedSpeed",
+      "r_index": 72
+    },
+    {
+      "s_data": 2,
+      "s_index": 126,
+      "ops": "read",
+      "module": "dis",
+      "name": "rGearValue1",
+      "r_index": 126
+    },
+    {
+      "s_index": 126,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setGearValue1",
+      "r_index": 126
+    },
+    {
+      "s_data": 2,
+      "s_index": 127,
+      "ops": "read",
+      "module": "dis",
+      "name": "rGearValue2",
+      "r_index": 127
+    },
+    {
+      "s_index": 127,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setGearValue2",
+      "r_index": 127
+    },
+    {
+      "s_data": 2,
+      "s_index": 119,
+      "ops": "read",
+      "module": "dis",
+      "name": "rAlarmLevel",
+      "r_index": 119
+    },
+    {
+      "s_index": 119,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setAlarmLevel"
+    },
+    {
+      "s_data": 2,
+      "s_index": 118,
+      "ops": "read",
+      "module": "dis",
+      "name": "rAlarmVolume",
+      "r_index": 118
+    },
+    {
+      "s_index": 118,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setAlarmVolume",
+      "r_index": 118
+    },
+    {
+      "s_data": 0,
+      "s_index": 118,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "closeAlarmVolume"
+    },
+    {
+      "s_data": 1,
+      "s_index": 118,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "openAlarmVolume"
+    },
+    {
+      "s_data": 2,
+      "s_index": 123,
+      "ops": "read",
+      "module": "dis",
+      "name": "rLightLevel",
+      "r_index": 123
+    },
+    {
+      "s_index": 123,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setLightLevel"
+    },
+    {
+      "s_data": 2,
+      "s_index": 129,
+      "ops": "read",
+      "module": "dis",
+      "name": "rDelayCloseLight",
+      "r_index": 129
+    },
+    {
+      "s_index": 129,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setDelayCloseLight"
+    },
+    {
+      "s_data": 2,
+      "s_index": 124,
+      "ops": "read",
+      "module": "dis",
+      "name": "rCTLBool2",
+      "r_index": 124
+    },
+    {
+      "s_index": 124,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setCTLBool2"
+    },
+    {
+      "s_index": 124,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setCTLBool2TimeOut500",
+      "timeout": 500
+    },
+    {
+      "s_data": 2,
+      "s_index": 132,
+      "ops": "read",
+      "module": "dis",
+      "name": "rCTLBool",
+      "r_index": 132
+    },
+    {
+      "s_index": 132,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setCTLBool",
+      "r_index": 132
+    },
+    {
+      "s_data": 2,
+      "s_index": 117,
+      "ops": "read",
+      "module": "dis",
+      "name": "rWarn",
+      "r_index": 117
+    },
+    {
+      "s_index": 117,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setWarn"
+    },
+    {
+      "s_data": 2,
+      "s_index": 117,
+      "ops": "read",
+      "module": "dis",
+      "name": "rWarn",
+      "r_index": 117
+    },
+    {
+      "s_index": 117,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setWarn"
+    },
+    {
+      "s_data": 2,
+      "s_index": 124,
+      "ops": "read",
+      "module": "dis",
+      "name": "rCTLBool2",
+      "r_index": 124
+    },
+    {
+      "s_data": 2,
+      "s_index": 117,
+      "ops": "read",
+      "module": "dis",
+      "name": "rWarn",
+      "r_index": 117
+    },
+    {
+      "s_data": 2,
+      "s_index": 139,
+      "ops": "read",
+      "module": "dis",
+      "name": "rNfcEmpty",
+      "r_index": 139
+    },
+    {
+      "s_index": 5,
+      "ops": "write",
+      "module": "dis",
+      "name": "writeNfcEnter",
+      "r_cmd": 104,
+      "timeout": 60000,
+      "s_cmd": 104
+    },
+    {
+      "s_index": 6,
+      "ops": "write",
+      "module": "dis",
+      "name": "writeNfcDelete",
+      "r_cmd": 104,
+      "timeout": 10000,
+      "s_cmd": 104
+    },
+    {
+      "s_index": 10,
+      "ops": "write",
+      "module": "dis",
+      "name": "writeNfcExit",
+      "r_cmd": 104,
+      "s_cmd": 104
+    },
+    {
+      "s_data": 2,
+      "s_index": 178,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBool",
+      "r_index": 178
+    },
+    {
+      "s_data": -1,
+      "s_index": 0,
+      "ops": "write",
+      "module": "dis",
+      "name": "setPwd",
+      "s_cmd": 102
+    },
+    {
+      "s_data": 2,
+      "s_index": 128,
+      "ops": "read",
+      "module": "dis",
+      "name": "rNFCCLA",
+      "r_index": 128
+    },
+    {
+      "s_data": 2,
+      "s_index": 147,
+      "ops": "read",
+      "module": "dis",
+      "name": "rLimitSpeed",
+      "r_index": 147
+    },
+    {
+      "s_index": 147,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setLimitSpeed"
+    },
+    {
+      "s_data": 0,
+      "s_index": 147,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setLimitSpeed_0"
+    },
+    {
+      "s_data": 25,
+      "s_index": 147,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setLimitSpeed_25"
+    },
+    {
+      "s_data": 45,
+      "s_index": 147,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setLimitSpeed_45"
+    },
+    {
+      "s_data": 60,
+      "s_index": 147,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setLimitSpeed_60"
+    },
+    {
+      "s_data": 2,
+      "s_index": 133,
+      "ops": "read",
+      "module": "dis",
+      "name": "rAutoLock",
+      "r_index": 133
+    },
+    {
+      "s_index": 133,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setAutoLock"
+    },
+    {
+      "s_index": 0,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "active",
+      "s_cmd": 87
+    },
+    {
+      "s_data": 12,
+      "s_index": 218,
+      "ops": "read",
+      "module": "dis",
+      "name": "rCPUId",
+      "r_index": 218
+    },
+    {
+      "s_index": 0,
+      "module": "mcu",
+      "name": "handleCalibrateStart",
+      "r_cmd": 171,
+      "s_cmd": 171
+    },
+    {
+      "s_index": 1,
+      "module": "mcu",
+      "name": "handleCalibrateCheck",
+      "r_cmd": 171,
+      "s_cmd": 171
+    },
+    {
+      "s_index": 2,
+      "module": "mcu",
+      "name": "handleCalibrateEnd",
+      "r_cmd": 171,
+      "s_cmd": 171
+    },
+    {
+      "s_index": 0,
+      "module": "dis",
+      "name": "fileInfo",
+      "timeout": 2000,
+      "retry": 0,
+      "s_cmd": 118
+    },
+    {
+      "s_index": 0,
+      "module": "dis",
+      "name": "fileWrite",
+      "s_cmd": 119
+    },
+    {
+      "s_index": 0,
+      "module": "dis",
+      "name": "fileCRC",
+      "s_cmd": 120
+    },
+    {
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "playSound",
+      "r_cmd": 17,
+      "s_cmd": 17
+    },
+    {
+      "s_data": 2,
+      "s_index": 3,
+      "ops": "read",
+      "module": "ecu",
+      "name": "rMainPower",
+      "r_index": 3
+    },
+    {
+      "s_data": 2,
+      "s_index": 140,
+      "ops": "read",
+      "module": "dis",
+      "name": "rFunAppBool2",
+      "r_index": 140
+    },
+    {
+      "s_data": 2,
+      "s_index": 138,
+      "ops": "read",
+      "module": "dis",
+      "name": "rFunAppBool",
+      "r_index": 138
+    },
+    {
+      "s_data": 2,
+      "s_index": 55,
+      "ops": "read",
+      "module": "dis",
+      "name": "rInfoBool2",
+      "r_index": 55
+    },
+    {
+      "s_index": 55,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setInfoBool2"
+    },
+    {
+      "s_data": 2,
+      "s_index": 181,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBattery",
+      "r_index": 181
+    },
+    {
+      "s_data": 4,
+      "s_index": 183,
+      "ops": "read",
+      "module": "dis",
+      "name": "rMileage",
+      "r_index": 183
+    },
+    {
+      "s_data": 2,
+      "s_index": 57,
+      "ops": "read",
+      "module": "dis",
+      "name": "rTimeFull",
+      "r_index": 57
+    },
+    {
+      "s_data": 2,
+      "s_index": 38,
+      "ops": "read",
+      "module": "dis",
+      "name": "rSpeed",
+      "r_index": 38
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "dis",
+      "name": "rSN",
+      "r_index": 16
+    },
+    {
+      "s_data": 2,
+      "s_index": 116,
+      "ops": "read",
+      "module": "dis",
+      "name": "rCfgMode",
+      "r_index": 116
+    },
+    {
+      "s_index": 116,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setCfgMode",
+      "r_index": 116
+    },
+    {
+      "s_data": 2,
+      "s_index": 145,
+      "ops": "read",
+      "module": "dis",
+      "name": "rChargePower",
+      "r_index": 145
+    },
+    {
+      "s_index": 145,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setChargePower",
+      "r_index": 145
+    },
+    {
+      "s_data": 2,
+      "s_index": 26,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rVoltage",
+      "r_index": 26
+    },
+    {
+      "s_data": 2,
+      "s_index": 28,
+      "ops": "read",
+      "module": "dis",
+      "name": "rAlarm"
+    },
+    {
+      "s_data": 2,
+      "s_index": 73,
+      "ops": "read",
+      "module": "dis",
+      "name": "rMaxPower"
+    },
+    {
+      "s_data": 2,
+      "s_index": 79,
+      "ops": "read",
+      "module": "dis",
+      "name": "rMiniPower"
+    },
+    {
+      "s_data": 2,
+      "s_index": 189,
+      "ops": "read",
+      "module": "dis",
+      "name": "rPower"
+    },
+    {
+      "s_data": 2,
+      "s_index": 185,
+      "ops": "read",
+      "module": "dis",
+      "name": "rSingleMileage"
+    },
+    {
+      "s_data": 2,
+      "s_index": 186,
+      "ops": "read",
+      "module": "dis",
+      "name": "rRunningTime"
+    },
+    {
+      "s_data": 2,
+      "s_index": 72,
+      "ops": "read",
+      "module": "dis",
+      "name": "rMaxSpeed"
+    },
+    {
+      "s_data": 2,
+      "s_index": 36,
+      "ops": "read",
+      "module": "dis",
+      "name": "rSigMaxSpeed"
+    },
+    {
+      "s_data": 2,
+      "s_index": 39,
+      "ops": "read",
+      "module": "dis",
+      "name": "rAveSpeed"
+    },
+    {
+      "s_data": 2,
+      "s_index": 94,
+      "ops": "read",
+      "module": "dis",
+      "name": "rNos"
+    },
+    {
+      "s_data": 2,
+      "s_index": 191,
+      "ops": "read",
+      "module": "dis",
+      "name": "rPowerLastIndex"
+    },
+    {
+      "module": "dis",
+      "name": "rPowerData",
+      "r_cmd": 13,
+      "s_cmd": 13
+    },
+    {
+      "s_data": 2,
+      "s_index": 175,
+      "ops": "read",
+      "module": "dis",
+      "name": "rPreciseMileage"
+    },
+    {
+      "s_data": 16,
+      "s_index": 227,
+      "ops": "read",
+      "module": "tft",
+      "name": "rSSID",
+      "r_index": 227
+    },
+    {
+      "s_data": 8,
+      "s_index": 235,
+      "ops": "read",
+      "module": "tft",
+      "name": "rPASSWORD",
+      "r_index": 235
+    },
+    {
+      "s_data": 4,
+      "s_index": 239,
+      "ops": "read",
+      "module": "tft",
+      "name": "rIP",
+      "r_index": 239
+    },
+    {
+      "s_data": 4,
+      "s_index": 241,
+      "ops": "read",
+      "module": "tft",
+      "name": "rPORT",
+      "r_index": 241
+    },
+    {
+      "s_index": 0,
+      "module": "tft",
+      "name": "file_read_begin",
+      "retry": 0,
+      "s_cmd": 130
+    },
+    {
+      "s_index": 0,
+      "module": "tft",
+      "name": "file_read_data",
+      "s_cmd": 131
+    },
+    {
+      "s_index": 0,
+      "module": "tft",
+      "name": "file_read_verify",
+      "s_cmd": 132
+    },
+    {
+      "s_data": 2,
+      "s_index": 160,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftBool",
+      "r_index": 160
+    },
+    {
+      "s_index": 0,
+      "ops": "write",
+      "module": "tft",
+      "name": "setNaviStart",
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_index": 1,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setNaviDistance",
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_index": 3,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setNaviInfo",
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_index": 16,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setNaviRoad",
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_index": 36,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setNaviRoadNext",
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_index": 56,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setNaviText",
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_index": 255,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setNaviExit",
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_data": 16,
+      "s_index": 179,
+      "ops": "read",
+      "module": "tft",
+      "name": "rWifiSsid",
+      "r_index": 179
+    },
+    {
+      "s_data": -1,
+      "s_index": 16,
+      "ops": "write",
+      "module": "ble",
+      "name": "mediaEnable",
+      "s_cmd": 111
+    },
+    {
+      "s_data": 4,
+      "s_index": 142,
+      "ops": "read",
+      "module": "dis",
+      "name": "rHandleRGB1",
+      "r_index": 142
+    },
+    {
+      "s_index": 142,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setHandleRGB1",
+      "r_index": 142
+    },
+    {
+      "s_data": 4,
+      "s_index": 157,
+      "ops": "read",
+      "module": "dis",
+      "name": "rHandleRGB2",
+      "r_index": 157
+    },
+    {
+      "s_index": 157,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setHandleRGB2",
+      "r_index": 157
+    },
+    {
+      "s_data": 2,
+      "s_index": 141,
+      "ops": "read",
+      "module": "dis",
+      "name": "rHandleLightMode",
+      "r_index": 141
+    },
+    {
+      "s_index": 141,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setHandleLightMode"
+    },
+    {
+      "s_index": 10,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftStatusBool",
+      "r_index": 10
+    },
+    {
+      "s_data": 2,
+      "s_index": 177,
+      "ops": "read",
+      "module": "dis",
+      "name": "rVrlaVoltage",
+      "r_index": 177
+    },
+    {
+      "s_index": 4,
+      "ops": "writeNR",
+      "module": "hep",
+      "name": "setHepLightMode_close",
+      "r_index": 4
+    },
+    {
+      "s_index": 8,
+      "ops": "writeNR",
+      "module": "hep",
+      "name": "setHepLightMode",
+      "r_index": 8
+    },
+    {
+      "s_index": 0,
+      "ops": "writeNR",
+      "module": "hep",
+      "name": "setHepLightMode_open",
+      "r_index": 0
+    },
+    {
+      "s_data": 8,
+      "s_index": 4,
+      "ops": "read",
+      "module": "hep",
+      "name": "rHepLightMode_close",
+      "r_index": 4
+    },
+    {
+      "s_index": 1,
+      "ops": "writeNR",
+      "module": "hep",
+      "name": "playLight",
+      "r_index": 1,
+      "r_cmd": 17,
+      "s_cmd": 17
+    },
+    {
+      "s_data": 8,
+      "s_index": 12,
+      "ops": "read",
+      "module": "hep",
+      "name": "rHepLightMode_park",
+      "r_index": 12
+    },
+    {
+      "s_index": 12,
+      "ops": "writeNR",
+      "module": "hep",
+      "name": "setHepLightMode_park",
+      "r_index": 12
+    },
+    {
+      "s_data": 8,
+      "s_index": 8,
+      "ops": "read",
+      "module": "hep",
+      "name": "rHepLightMode",
+      "r_index": 8
+    },
+    {
+      "s_index": 14,
+      "ops": "writeNR",
+      "module": "hep",
+      "name": "setHepLightMode_park_color2",
+      "r_index": 14
+    },
+    {
+      "s_index": 13,
+      "ops": "writeNR",
+      "module": "hep",
+      "name": "setHepLightMode_park_color1",
+      "r_index": 13
+    },
+    {
+      "s_data": 8,
+      "s_index": 0,
+      "ops": "read",
+      "module": "hep",
+      "name": "rHepLightMode_open",
+      "r_index": 0
+    },
+    {
+      "s_index": 9,
+      "ops": "writeNR",
+      "module": "hep",
+      "name": "setHepLightMode_color1",
+      "r_index": 9
+    },
+    {
+      "s_data": 2,
+      "s_index": 29,
+      "ops": "read",
+      "module": "bms-ble1",
+      "name": "rFindMyStatus",
+      "r_index": 29,
+      "retry": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 32,
+      "ops": "read",
+      "module": "bms-ble1",
+      "name": "rFindMyEnable",
+      "r_index": 32
+    },
+    {
+      "s_data": 1,
+      "s_index": 58,
+      "ops": "writeNR",
+      "module": "bms-ble1",
+      "name": "openFindMyPairBroadcast",
+      "r_index": 58
+    },
+    {
+      "s_index": 31,
+      "ops": "writeNR",
+      "module": "bms-ble1",
+      "name": "unbondFindMy",
+      "r_index": 31
+    },
+    {
+      "s_data": 16,
+      "s_index": 21,
+      "ops": "read",
+      "module": "bms-ble1",
+      "name": "rBmsBle1PN",
+      "r_index": 21,
+      "retry": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 1,
+      "ops": "read",
+      "module": "bms-ble1",
+      "name": "rBmsBle1V",
+      "r_index": 1,
+      "retry": 1
+    },
+    {
+      "s_index": 1,
+      "ops": "writeNR",
+      "module": "light",
+      "name": "playLight2",
+      "r_index": 1,
+      "r_cmd": 17,
+      "s_cmd": 17
+    },
+    {
+      "s_data": 8,
+      "s_index": 0,
+      "ops": "read",
+      "module": "light",
+      "name": "rLightLightMode_open",
+      "r_index": 0
+    },
+    {
+      "s_index": 0,
+      "ops": "writeNR",
+      "module": "light",
+      "name": "setLightLightMode_open",
+      "r_index": 0
+    },
+    {
+      "s_index": 1,
+      "ops": "writeNR",
+      "module": "light",
+      "name": "setLightLightMode_open_color1",
+      "r_index": 1
+    },
+    {
+      "s_data": 8,
+      "s_index": 4,
+      "ops": "read",
+      "module": "light",
+      "name": "rLightLightMode_close",
+      "r_index": 4
+    },
+    {
+      "s_index": 4,
+      "ops": "writeNR",
+      "module": "light",
+      "name": "setLightLightMode_close",
+      "r_index": 4
+    },
+    {
+      "s_index": 5,
+      "ops": "writeNR",
+      "module": "light",
+      "name": "setLightLightMode_close_color1",
+      "r_index": 5
+    },
+    {
+      "s_data": 8,
+      "s_index": 8,
+      "ops": "read",
+      "module": "light",
+      "name": "rLightLightMode",
+      "r_index": 8
+    },
+    {
+      "s_index": 8,
+      "ops": "writeNR",
+      "module": "light",
+      "name": "setLightLightMode",
+      "r_index": 8
+    },
+    {
+      "s_index": 9,
+      "ops": "writeNR",
+      "module": "light",
+      "name": "setLightLightMode_color1",
+      "r_index": 9
+    },
+    {
+      "s_data": 8,
+      "s_index": 12,
+      "ops": "read",
+      "module": "light",
+      "name": "rLightLightMode_park",
+      "r_index": 12
+    },
+    {
+      "s_index": 12,
+      "ops": "writeNR",
+      "module": "light",
+      "name": "setLightLightMode_park",
+      "r_index": 12
+    },
+    {
+      "s_index": 13,
+      "ops": "writeNR",
+      "module": "light",
+      "name": "setLightLightMode_park_color1",
+      "r_index": 13
+    },
+    {
+      "s_index": 14,
+      "ops": "writeNR",
+      "module": "light",
+      "name": "setLightLightMode_park_color2",
+      "r_index": 14
+    },
+    {
+      "s_index": 1,
+      "ops": "writeNR",
+      "module": "hep",
+      "name": "setHepLightMode_open_color1",
+      "r_index": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 169,
+      "ops": "read",
+      "module": "dis",
+      "name": "rDisBoolA9",
+      "r_index": 169
+    },
+    {
+      "s_data": 2,
+      "s_index": 165,
+      "ops": "read",
+      "module": "tft",
+      "name": "rPackLost",
+      "r_index": 165
+    },
+    {
+      "s_index": 5,
+      "ops": "writeNR",
+      "module": "hep",
+      "name": "setHepLightMode_close_color1",
+      "r_index": 5
+    },
+    {
+      "s_index": 170,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setDisBoolAA",
+      "r_index": 170
+    },
+    {
+      "s_data": 2,
+      "s_index": 170,
+      "ops": "read",
+      "module": "dis",
+      "name": "rDisBoolAA",
+      "r_index": 170
+    },
+    {
+      "s_data": 8,
+      "s_index": 64,
+      "ops": "read",
+      "module": "hep",
+      "name": "rHepLightBool",
+      "r_index": 64,
+      "retry": 1
+    },
+    {
+      "s_data": 8,
+      "s_index": 64,
+      "ops": "read",
+      "module": "light",
+      "name": "rLightLightBool",
+      "r_index": 64
+    },
+    {
+      "s_index": 48,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "rAppNaviState",
+      "r_index": 48,
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_data": 4,
+      "s_index": 2,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBms1Bool",
+      "r_index": 2
+    },
+    {
+      "s_data": 4,
+      "s_index": 2,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBms2Bool",
+      "r_index": 2
+    },
+    {
+      "s_data": 2,
+      "s_index": 29,
+      "ops": "read",
+      "module": "bms-ble2",
+      "name": "rFindMyStatus2",
+      "r_index": 29,
+      "retry": 1
+    },
+    {
+      "s_index": 31,
+      "ops": "writeNR",
+      "module": "bms-ble2",
+      "name": "unbondFindMy2",
+      "r_index": 31
+    },
+    {
+      "s_data": 1,
+      "s_index": 58,
+      "ops": "writeNR",
+      "module": "bms-ble2",
+      "name": "openFindMyPairBroadcast2",
+      "r_index": 58
+    },
+    {
+      "s_data": 2,
+      "s_index": 1,
+      "ops": "read",
+      "module": "bms-ble2",
+      "name": "rBmsBle2V",
+      "r_index": 1,
+      "retry": 1
+    },
+    {
+      "s_data": 16,
+      "s_index": 21,
+      "ops": "read",
+      "module": "bms-ble2",
+      "name": "rBmsBle2PN",
+      "r_index": 21,
+      "retry": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 32,
+      "ops": "read",
+      "module": "bms-ble2",
+      "name": "rFindMyEnable2",
+      "r_index": 32,
+      "retry": 1
+    },
+    {
+      "s_index": 12,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setNaviDriveInfo",
+      "r_index": 12,
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_data": 6,
+      "s_index": 128,
+      "ops": "read",
+      "module": "ble",
+      "name": "rFrontTirePressureMAC",
+      "r_index": 128
+    },
+    {
+      "s_data": 6,
+      "s_index": 131,
+      "ops": "read",
+      "module": "ble",
+      "name": "rTrailingTirePressureMAC",
+      "r_index": 131
+    },
+    {
+      "s_data": 2,
+      "s_index": 136,
+      "ops": "read",
+      "module": "ble",
+      "name": "rTireTemperatureMaxValue",
+      "r_index": 136
+    },
+    {
+      "s_data": 2,
+      "s_index": 138,
+      "ops": "read",
+      "module": "ble",
+      "name": "rTirePressureState",
+      "r_index": 138
+    },
+    {
+      "s_data": 2,
+      "s_index": 139,
+      "ops": "read",
+      "module": "ble",
+      "name": "rTirePressureValue",
+      "r_index": 139
+    },
+    {
+      "s_data": 2,
+      "s_index": 140,
+      "ops": "read",
+      "module": "ble",
+      "name": "rTireTemperatureValue",
+      "r_index": 140
+    },
+    {
+      "s_data": 2,
+      "s_index": 143,
+      "ops": "read",
+      "module": "ble",
+      "name": "rTirePressureEnergy",
+      "r_index": 143
+    },
+    {
+      "s_data": 2,
+      "s_index": 169,
+      "ops": "read",
+      "module": "dis",
+      "name": "rFunAppBool3",
+      "r_index": 169
+    },
+    {
+      "s_data": 10,
+      "s_index": 138,
+      "ops": "read",
+      "module": "ble",
+      "name": "rTirePressureRealTimeInfo",
+      "r_index": 138
+    },
+    {
+      "s_data": 4,
+      "s_index": 134,
+      "ops": "read",
+      "module": "ble",
+      "name": "rTirePressureMinAndMaxValue",
+      "r_index": 134
+    },
+    {
+      "s_index": 134,
+      "ops": "write",
+      "module": "ble",
+      "name": "setTirePressureMinAndMaxValue",
+      "r_index": 134
+    },
+    {
+      "s_data": 4,
+      "s_index": 243,
+      "ops": "read",
+      "module": "tft",
+      "name": "rWifiPORT",
+      "r_index": 243
+    },
+    {
+      "s_data": 2,
+      "s_index": 178,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBoolPeriod3000",
+      "r_index": 178
+    },
+    {
+      "s_index": 1,
+      "ops": "write",
+      "module": "ble",
+      "name": "wMediaState",
+      "r_index": 1,
+      "r_cmd": 144,
+      "timeout": 500,
+      "s_cmd": 144
+    },
+    {
+      "s_index": 0,
+      "ops": "writeNR",
+      "module": "ble",
+      "name": "wMediaControlAck",
+      "r_index": 0,
+      "s_cmd": 144
+    },
+    {
+      "s_index": 2,
+      "ops": "write",
+      "module": "ble",
+      "name": "wMediaInfo",
+      "r_index": 2,
+      "r_cmd": 144,
+      "timeout": 500,
+      "s_cmd": 144
+    },
+    {
+      "s_index": 128,
+      "ops": "write",
+      "module": "ble",
+      "name": "setFrontTirePressureMAC",
+      "r_index": 128
+    },
+    {
+      "s_index": 131,
+      "ops": "write",
+      "module": "ble",
+      "name": "setTrailingTirePressureMAC",
+      "r_index": 131
+    },
+    {
+      "s_data": 2,
+      "s_index": 178,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBoolPeriod1000",
+      "r_index": 178
+    },
+    {
+      "s_data": 2,
+      "s_index": 55,
+      "ops": "read",
+      "module": "dis",
+      "name": "rInfoBool2_1000",
+      "r_index": 55
+    },
+    {
+      "s_data": 2,
+      "s_index": 156,
+      "ops": "read",
+      "module": "dis",
+      "name": "rFunAppBool4",
+      "r_index": 156
+    },
+    {
+      "s_data": 2,
+      "s_index": 171,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBatteryHeatTime",
+      "r_index": 171
+    },
+    {
+      "s_index": 170,
+      "ops": "write",
+      "module": "dis",
+      "name": "setBatteryHeat",
+      "r_index": 170,
+      "r_cmd": 6,
+      "s_cmd": 6
+    },
+    {
+      "s_data": 2,
+      "s_index": 136,
+      "ops": "read",
+      "module": "ble",
+      "name": "rTirePressureTempature",
+      "r_index": 136
+    },
+    {
+      "s_index": 136,
+      "ops": "write",
+      "module": "ble",
+      "name": "setTirePressureTempature",
+      "r_index": 136
+    },
+    {
+      "s_index": 1,
+      "ops": "writeNR",
+      "module": "ecu",
+      "name": "unlock",
+      "r_index": 1,
+      "s_cmd": 99
+    },
+    {
+      "s_index": 18,
+      "ops": "write",
+      "module": "ble",
+      "name": "setMediaSwitch",
+      "r_index": 18,
+      "r_cmd": 111,
+      "s_cmd": 111
+    },
+    {
+      "s_data": 2,
+      "s_index": 50,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBms1SOC",
+      "r_index": 50
+    },
+    {
+      "s_data": 2,
+      "s_index": 50,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBms2SOC",
+      "r_index": 50
+    },
+    {
+      "s_data": 2,
+      "s_index": 50,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rBms3SOC",
+      "r_index": 50
+    },
+    {
+      "s_index": 245,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setAppWifiState",
+      "r_index": 245
+    },
+    {
+      "s_data": 2,
+      "s_index": 32,
+      "ops": "read",
+      "module": "ecu",
+      "name": "rInfSet",
+      "r_index": 32
+    },
+    {
+      "s_index": 32,
+      "ops": "writeNR",
+      "module": "ecu",
+      "name": "setInfSet",
+      "r_index": 32,
+      "r_cmd": 6,
+      "s_cmd": 6
+    },
+    {
+      "s_data": 2,
+      "s_index": 84,
+      "ops": "read",
+      "module": "ecu",
+      "name": "rInfRtstateBool2",
+      "r_index": 84
+    },
+    {
+      "s_data": 2,
+      "s_index": 170,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBool2",
+      "r_index": 170
+    },
+    {
+      "s_index": 170,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setBool2",
+      "r_index": 170
+    },
+    {
+      "s_data": 2,
+      "s_index": 1,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftTheme1",
+      "r_index": 1,
+      "r_cmd": 129,
+      "s_cmd": 129
+    },
+    {
+      "s_index": 2,
+      "ops": "write",
+      "module": "tft",
+      "name": "setTftTheme1",
+      "r_index": 2,
+      "s_cmd": 129
+    },
+    {
+      "s_data": 0,
+      "s_index": 3,
+      "ops": "read",
+      "module": "tft",
+      "name": "rGearNameM1",
+      "r_index": 3,
+      "r_cmd": 129,
+      "s_cmd": 129
+    },
+    {
+      "s_index": 4,
+      "ops": "write",
+      "module": "tft",
+      "name": "setGearNameM1",
+      "r_index": 4,
+      "s_cmd": 129
+    },
+    {
+      "s_data": 2,
+      "s_index": 5,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftTheme2",
+      "r_index": 5,
+      "r_cmd": 129,
+      "s_cmd": 129
+    },
+    {
+      "s_index": 6,
+      "ops": "write",
+      "module": "tft",
+      "name": "setTftTheme2",
+      "r_index": 6,
+      "s_cmd": 129
+    },
+    {
+      "s_data": 0,
+      "s_index": 7,
+      "ops": "read",
+      "module": "tft",
+      "name": "rGearNameM2",
+      "r_index": 7,
+      "r_cmd": 129,
+      "s_cmd": 129
+    },
+    {
+      "s_index": 8,
+      "ops": "write",
+      "module": "tft",
+      "name": "setGearNameM2",
+      "r_index": 8,
+      "s_cmd": 129
+    },
+    {
+      "s_data": 32,
+      "s_index": 34,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rGearData1",
+      "r_index": 34
+    },
+    {
+      "s_index": 34,
+      "ops": "write",
+      "module": "mcu",
+      "name": "wGearData1",
+      "r_index": 34
+    },
+    {
+      "s_index": 44,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setGearEnergy",
+      "r_index": 44
+    },
+    {
+      "s_index": 45,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setGearAccSpeed",
+      "r_index": 45
+    },
+    {
+      "s_index": 46,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setGearAccSensitivity",
+      "r_index": 46
+    },
+    {
+      "s_index": 47,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setGearTcs",
+      "r_index": 47
+    },
+    {
+      "s_index": 48,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setGearNitroSpeed",
+      "r_index": 48
+    },
+    {
+      "s_index": 49,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setGearTopSpeed",
+      "r_index": 49
+    },
+    {
+      "s_index": 34,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setAccMap",
+      "r_index": 34
+    },
+    {
+      "s_data": 32,
+      "s_index": 58,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rGearData2",
+      "r_index": 58
+    },
+    {
+      "s_index": 58,
+      "ops": "write",
+      "module": "mcu",
+      "name": "wGearData2",
+      "r_index": 58
+    },
+    {
+      "s_index": 68,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setGearEnergy2",
+      "r_index": 68
+    },
+    {
+      "s_index": 69,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setGearAccSpeed2",
+      "r_index": 69
+    },
+    {
+      "s_index": 70,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setGearAccSensitivity2",
+      "r_index": 70
+    },
+    {
+      "s_index": 71,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setGearTcs2",
+      "r_index": 71
+    },
+    {
+      "s_index": 72,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setGearNitroSpeed2",
+      "r_index": 72
+    },
+    {
+      "s_index": 73,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setGearTopSpeed2",
+      "r_index": 73
+    },
+    {
+      "s_index": 58,
+      "ops": "writeNR",
+      "module": "mcu",
+      "name": "setAccMap2",
+      "r_index": 58
+    },
+    {
+      "s_data": 2,
+      "s_index": 176,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftSkinValue",
+      "r_index": 176
+    },
+    {
+      "s_index": 176,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "wTftSkinValue",
+      "r_index": 176
+    },
+    {
+      "s_data": 2,
+      "s_index": 161,
+      "ops": "read",
+      "module": "tft",
+      "name": "rBoolTftA1",
+      "r_index": 161
+    },
+    {
+      "s_index": 0,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "writeLongString",
+      "r_index": 0,
+      "r_cmd": 114,
+      "s_cmd": 114
+    },
+    {
+      "s_data": 2,
+      "s_index": 211,
+      "ops": "read",
+      "module": "dis",
+      "name": "rABSRV",
+      "r_index": 211
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "abs-r",
+      "name": "rABSRPN",
+      "r_index": 16,
+      "retry": 2
+    },
+    {
+      "s_data": 14,
+      "s_index": 32,
+      "ops": "read",
+      "module": "hep",
+      "name": "rHEPPN",
+      "r_index": 32,
+      "timeout": 2000
+    },
+    {
+      "s_data": 2,
+      "s_index": 164,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftHeadsetBleState",
+      "r_index": 164
+    },
+    {
+      "s_data": 2,
+      "s_index": 178,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftSetBool",
+      "r_index": 178
+    },
+    {
+      "s_index": 178,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setTftBool",
+      "r_index": 178
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "abs",
+      "name": "rABSPN",
+      "r_index": 16,
+      "retry": 2
+    },
+    {
+      "s_data": 2,
+      "s_index": 151,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftV_old",
+      "r_index": 151
+    },
+    {
+      "s_data": 14,
+      "s_index": 144,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftPN_old",
+      "r_index": 144
+    },
+    {
+      "s_data": 2,
+      "s_index": 104,
+      "ops": "read",
+      "module": "ble",
+      "name": "rBleV",
+      "r_index": 104
+    },
+    {
+      "s_index": 179,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setWifiSsid",
+      "r_index": 179
+    },
+    {
+      "s_data": 1,
+      "s_index": 177,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "startUpdateTft",
+      "r_index": 177
+    },
+    {
+      "s_index": 195,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setWifiPassword",
+      "r_index": 195
+    },
+    {
+      "s_data": 2,
+      "s_index": 130,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftUpdateState",
+      "r_index": 130
+    },
+    {
+      "s_data": 2,
+      "s_index": 163,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftBleState",
+      "r_index": 163
+    },
+    {
+      "s_value": "$ident",
+      "s_index": 115,
+      "ops": "writeNR",
+      "module": "ecu",
+      "name": "openTrunk_os",
+      "r_index": 115,
+      "r_cmd": 100,
+      "s_cmd": 100
+    },
+    {
+      "s_value": "$ident",
+      "s_index": 78,
+      "ops": "writeNR",
+      "module": "ecu",
+      "name": "openAcc_os",
+      "r_index": 78,
+      "timeout": 1500,
+      "s_cmd": 100
+    },
+    {
+      "s_data": -1,
+      "s_value": "$ident",
+      "s_index": 70,
+      "ops": "writeNR",
+      "module": "ecu",
+      "name": "closeAcc_os",
+      "r_index": 70,
+      "s_cmd": 100
+    },
+    {
+      "s_data": 2,
+      "s_index": 26,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rVoltage2",
+      "r_index": 26
+    },
+    {
+      "s_data": 2,
+      "s_index": 26,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rVoltage3",
+      "r_index": 26
+    },
+    {
+      "s_index": 9,
+      "ops": "writeNR",
+      "module": "hep",
+      "name": "setHepColor",
+      "r_index": 9
+    },
+    {
+      "s_data": 2,
+      "s_index": 14,
+      "ops": "read",
+      "module": "hep",
+      "name": "rHepLight",
+      "r_index": 14
+    },
+    {
+      "s_data": 4,
+      "s_index": 9,
+      "ops": "read",
+      "module": "hep",
+      "name": "rHepRGB",
+      "r_index": 9
+    },
+    {
+      "s_index": 14,
+      "ops": "writeNR",
+      "module": "hep",
+      "name": "setHepLight",
+      "r_index": 14
+    },
+    {
+      "s_data": 2,
+      "s_index": 234,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsMoreInfo",
+      "r_index": 234,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 138,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsRemainCapacity",
+      "r_index": 138,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 10,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsManufactureDate",
+      "r_index": 10,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 4,
+      "s_index": 227,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsEnergyThroughput",
+      "r_index": 227,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 4,
+      "s_index": 225,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsCapacityThroughput",
+      "r_index": 225,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 89,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsCycleCount",
+      "r_index": 89,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 137,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsDeepDischargeCount",
+      "r_index": 137,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 4,
+      "s_index": 245,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsExtremeUseTime",
+      "r_index": 245,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 4,
+      "s_index": 247,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsExtremeChargeTime",
+      "r_index": 247,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 234,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBms2MoreInfo",
+      "r_index": 234,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 138,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBms2RemainCapacity",
+      "r_index": 138,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 10,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBms2ManufactureDate",
+      "r_index": 10,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 4,
+      "s_index": 227,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBms2EnergyThroughput",
+      "r_index": 227,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 4,
+      "s_index": 225,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBms2CapacityThroughput",
+      "r_index": 225,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 89,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBms2CycleCount",
+      "r_index": 89,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 137,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBms2DeepDischargeCount",
+      "r_index": 137,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 4,
+      "s_index": 245,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBms2ExtremeUseTime",
+      "r_index": 245,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 4,
+      "s_index": 247,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBms2ExtremeChargeTime",
+      "r_index": 247,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 234,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rBms3MoreInfo",
+      "r_index": 234,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 138,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rBms3RemainCapacity",
+      "r_index": 138,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 10,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rBms3ManufactureDate",
+      "r_index": 10,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 4,
+      "s_index": 227,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rBms3EnergyThroughput",
+      "r_index": 227,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 4,
+      "s_index": 225,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rBms3CapacityThroughput",
+      "r_index": 225,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 89,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rBms3CycleCount",
+      "r_index": 89,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 137,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rBms3DeepDischargeCount",
+      "r_index": 137,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 4,
+      "s_index": 245,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rBms3ExtremeUseTime",
+      "r_index": 245,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 4,
+      "s_index": 247,
+      "ops": "read",
+      "module": "bms3",
+      "name": "rBms3ExtremeChargeTime",
+      "r_index": 247,
+      "r_cmd": 170,
+      "s_cmd": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 79,
+      "ops": "read",
+      "module": "ble",
+      "name": "rFunSupBool2",
+      "r_index": 79,
+      "retry": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 86,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rSlope",
+      "r_index": 86
+    },
+    {
+      "s_data": 2,
+      "s_index": 86,
+      "ops": "write",
+      "module": "mcu",
+      "name": "setSlope",
+      "r_index": 86
+    },
+    {
+      "s_index": 1,
+      "ops": "write",
+      "module": "dis",
+      "name": "fileDelete",
+      "r_index": 1,
+      "r_cmd": 137,
+      "s_cmd": 137
+    },
+    {
+      "s_data": 6,
+      "s_index": 1,
+      "ops": "write",
+      "module": "dis",
+      "name": "fileRetrieve",
+      "r_index": 1,
+      "r_cmd": 138,
+      "s_cmd": 138
+    },
+    {
+      "s_index": 1,
+      "ops": "write",
+      "module": "dis",
+      "name": "fileSet",
+      "r_index": 1,
+      "r_cmd": 139,
+      "timeout": 5000,
+      "s_cmd": 139
+    },
+    {
+      "s_data": 2,
+      "s_index": 1,
+      "ops": "read",
+      "module": "ble",
+      "name": "rBT100BleV",
+      "r_index": 1
+    },
+    {
+      "s_data": 16,
+      "s_index": 13,
+      "ops": "read",
+      "module": "ble",
+      "name": "rBT100BlePN",
+      "r_index": 13
+    },
+    {
+      "s_data": 2,
+      "s_index": 80,
+      "ops": "read",
+      "module": "ecu",
+      "name": "rFunSupBoolEcu",
+      "r_index": 80
+    },
+    {
+      "s_data": 2,
+      "s_index": 9,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rMCUMaxSpeed",
+      "r_index": 9,
+      "timeout": 1000,
+      "retry": 2
+    },
+    {
+      "s_data": 2,
+      "s_index": 87,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rEleBrake",
+      "r_index": 87
+    },
+    {
+      "s_data": 2,
+      "s_index": 87,
+      "ops": "write",
+      "module": "mcu",
+      "name": "setEleBrake",
+      "r_index": 87
+    },
+    {
+      "s_data": 2,
+      "s_index": 85,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rTCS",
+      "r_index": 85
+    },
+    {
+      "s_data": 2,
+      "s_index": 85,
+      "ops": "write",
+      "module": "mcu",
+      "name": "setTCS",
+      "r_index": 85
+    },
+    {
+      "s_data": 2,
+      "s_index": 82,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rSpeedIntensity",
+      "r_index": 82
+    },
+    {
+      "s_data": 2,
+      "s_index": 82,
+      "ops": "write",
+      "module": "mcu",
+      "name": "setSpeedIntensity",
+      "r_index": 82
+    },
+    {
+      "s_data": 2,
+      "s_index": 250,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBool_0xFA",
+      "r_index": 250
+    },
+    {
+      "s_data": 1,
+      "s_index": 246,
+      "ops": "write",
+      "module": "tft",
+      "name": "setTFTLanguage",
+      "r_index": 246
+    },
+    {
+      "s_data": 1,
+      "s_index": 246,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTFTLanguage",
+      "r_index": 246
+    },
+    {
+      "s_index": 247,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setDashNaviTheme",
+      "r_index": 247,
+      "s_cmd": 6
+    },
+    {
+      "s_data": 2,
+      "s_index": 247,
+      "ops": "read",
+      "module": "tft",
+      "name": "rDashNaviTheme",
+      "r_index": 247
+    },
+    {
+      "s_data": 2,
+      "s_index": 248,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftLanguageTypes",
+      "r_index": 248
+    },
+    {
+      "s_index": 0,
+      "ops": "write",
+      "module": "dis",
+      "name": "setPassWord",
+      "r_index": 0,
+      "s_cmd": 175
+    },
+    {
+      "s_data": 2,
+      "s_index": 239,
+      "ops": "read",
+      "module": "dis",
+      "name": "rDVRFV",
+      "r_index": 239
+    },
+    {
+      "s_data": 16,
+      "s_index": 23,
+      "ops": "read",
+      "module": "dvr-f",
+      "name": "rDVRFPN",
+      "r_index": 23,
+      "retry": 0
+    },
+    {
+      "s_data": 16,
+      "s_index": 7,
+      "ops": "read",
+      "module": "dvr-f",
+      "name": "rDVRFLocalPSK",
+      "r_index": 7,
+      "retry": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 83,
+      "ops": "read",
+      "module": "ecu",
+      "name": "rDVRFStatus",
+      "r_index": 83
+    },
+    {
+      "s_data": 2,
+      "s_index": 173,
+      "ops": "read",
+      "module": "dvr-f",
+      "name": "rDVRAbnormalStatus",
+      "r_index": 173
+    },
+    {
+      "s_data": 2,
+      "s_index": 174,
+      "ops": "read",
+      "module": "dvr-f",
+      "name": "rDVRStatus3",
+      "r_index": 174
+    },
+    {
+      "s_index": 176,
+      "ops": "write",
+      "module": "dvr-f",
+      "name": "setDVRFBoolBit",
+      "r_index": 176,
+      "r_cmd": 6,
+      "s_cmd": 6
+    },
+    {
+      "s_data": 2,
+      "s_index": 84,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rEnergyStatus",
+      "r_index": 84
+    },
+    {
+      "s_data": 2,
+      "s_index": 84,
+      "ops": "write",
+      "module": "mcu",
+      "name": "setEnergyStatus",
+      "r_index": 84
+    },
+    {
+      "s_index": 83,
+      "ops": "write",
+      "module": "mcu",
+      "name": "setSpeedSafeLock",
+      "r_index": 83
+    },
+    {
+      "s_data": 2,
+      "s_index": 83,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rSpeedSafeLock",
+      "r_index": 83
+    },
+    {
+      "s_data": 4,
+      "s_index": 156,
+      "ops": "read",
+      "module": "gl-apl",
+      "name": "rWindowLightOnline",
+      "r_index": 156,
+      "s_cmd": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 121,
+      "ops": "read",
+      "module": "gl-apl",
+      "name": "rWindowLightConnected",
+      "r_index": 121,
+      "s_cmd": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 122,
+      "ops": "read",
+      "module": "gl-apl",
+      "name": "rWindowLightBool",
+      "r_index": 122,
+      "s_cmd": 1
+    },
+    {
+      "s_index": 122,
+      "ops": "write",
+      "module": "gl-apl",
+      "name": "setWindowLightBool",
+      "r_index": 0
+    },
+    {
+      "s_data": 2,
+      "s_index": 123,
+      "ops": "read",
+      "module": "gl-apl",
+      "name": "rWindowLightMode",
+      "r_index": 123,
+      "s_cmd": 1
+    },
+    {
+      "s_index": 123,
+      "ops": "write",
+      "module": "gl-apl",
+      "name": "setWindowLightMode",
+      "r_index": 0
+    },
+    {
+      "s_data": 4,
+      "s_index": 124,
+      "ops": "read",
+      "module": "gl-apl",
+      "name": "rWindowLightMode_solid_color",
+      "r_index": 124,
+      "s_cmd": 1
+    },
+    {
+      "s_index": 124,
+      "ops": "write",
+      "module": "gl-apl",
+      "name": "setWindowLightMode_solid_color",
+      "r_index": 0
+    },
+    {
+      "s_data": 4,
+      "s_index": 126,
+      "ops": "read",
+      "module": "gl-apl",
+      "name": "rWindowLightMode_breath_color1",
+      "r_index": 126,
+      "s_cmd": 1
+    },
+    {
+      "s_index": 126,
+      "ops": "write",
+      "module": "gl-apl",
+      "name": "setWindowLightMode_breath_color1",
+      "r_index": 0
+    },
+    {
+      "s_data": 4,
+      "s_index": 128,
+      "ops": "read",
+      "module": "gl-apl",
+      "name": "rWindowLightMode_breath_color2",
+      "r_index": 128,
+      "s_cmd": 1
+    },
+    {
+      "s_index": 128,
+      "ops": "write",
+      "module": "gl-apl",
+      "name": "setWindowLightMode_breath_color2",
+      "r_index": 128
+    },
+    {
+      "s_value": "01000000",
+      "ops": "write",
+      "module": "gl-apl",
+      "name": "关闭橱窗灯",
+      "r_index": 0,
+      "s_cmd": 6
+    },
+    {
+      "s_data": 2,
+      "s_index": 2,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBool_0x02",
+      "r_index": 2
+    },
+    {
+      "s_data": 0,
+      "s_index": 122,
+      "ops": "write",
+      "module": "gl-apl",
+      "name": "setWindowLightClose",
+      "r_index": 122
+    },
+    {
+      "s_data": 2,
+      "s_index": 146,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBatteryType",
+      "r_index": 146
+    },
+    {
+      "s_index": 253,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "sBool_0xFD",
+      "r_index": 253
+    },
+    {
+      "s_data": 2,
+      "s_index": 253,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBool_0xFD",
+      "r_index": 253
+    },
+    {
+      "s_data": 2,
+      "s_index": 158,
+      "ops": "read",
+      "module": "tft",
+      "name": "rOMOSFlag",
+      "r_index": 158,
+      "retry": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 121,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLStatus",
+      "r_index": 121
+    },
+    {
+      "s_index": 121,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLStatus",
+      "r_index": 121,
+      "r_cmd": 6,
+      "s_cmd": 6
+    },
+    {
+      "s_index": 122,
+      "ops": "writeNR",
+      "module": "fl-apl",
+      "name": "FL-APLPreview",
+      "r_index": 122
+    },
+    {
+      "s_data": 2,
+      "s_index": 123,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLOnOffModel",
+      "r_index": 123
+    },
+    {
+      "s_index": 123,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLOnOffModel",
+      "r_index": 123
+    },
+    {
+      "s_index": 124,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLFlowColor1",
+      "r_index": 124
+    },
+    {
+      "s_data": 4,
+      "s_index": 124,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLFlowColor1",
+      "r_index": 124
+    },
+    {
+      "s_data": 4,
+      "s_index": 126,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLFlowColor2",
+      "r_index": 126
+    },
+    {
+      "s_index": 126,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLFlowColor2",
+      "r_index": 126
+    },
+    {
+      "s_data": 4,
+      "s_index": 128,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLFlowColor3",
+      "r_index": 128
+    },
+    {
+      "s_index": 128,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLFlowColor3",
+      "r_index": 128
+    },
+    {
+      "s_index": 7,
+      "ops": "write",
+      "module": "ecu",
+      "name": "thirdPartsBind",
+      "r_index": 4,
+      "s_cmd": 40
+    },
+    {
+      "s_index": 5,
+      "ops": "write",
+      "module": "ecu",
+      "name": "thirdPartsPair",
+      "r_index": 0,
+      "r_cmd": 40,
+      "s_cmd": 40
+    },
+    {
+      "s_index": 8,
+      "ops": "write",
+      "module": "ecu",
+      "name": "thirdPartsUnbind",
+      "r_index": 0,
+      "r_cmd": 40,
+      "s_cmd": 40
+    },
+    {
+      "s_data": 16,
+      "s_index": 23,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLPN",
+      "r_index": 23,
+      "retry": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 139,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModelLight1",
+      "r_index": 139
+    },
+    {
+      "s_data": 2,
+      "s_index": 140,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModelSpeed1",
+      "r_index": 140
+    },
+    {
+      "s_data": 2,
+      "s_index": 141,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLColorEnable1",
+      "r_index": 141
+    },
+    {
+      "s_data": 4,
+      "s_index": 142,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel1_Color1",
+      "r_index": 142
+    },
+    {
+      "s_data": 4,
+      "s_index": 144,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel1_Color2",
+      "r_index": 144
+    },
+    {
+      "s_data": 4,
+      "s_index": 146,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel1_Color3",
+      "r_index": 146
+    },
+    {
+      "s_data": 4,
+      "s_index": 150,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel1_Color5",
+      "r_index": 150
+    },
+    {
+      "s_index": 139,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModelLight1",
+      "r_index": 139
+    },
+    {
+      "s_index": 140,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModeSpeed1",
+      "r_index": 140
+    },
+    {
+      "s_index": 141,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLColorEnable1",
+      "r_index": 141
+    },
+    {
+      "s_index": 142,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel1_Color1",
+      "r_index": 142
+    },
+    {
+      "s_index": 144,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel1_Color2",
+      "r_index": 144
+    },
+    {
+      "s_index": 148,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel1_Color4",
+      "r_index": 148
+    },
+    {
+      "s_index": 150,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel1_Color5",
+      "r_index": 150
+    },
+    {
+      "s_data": 2,
+      "s_index": 154,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModelLight2",
+      "r_index": 154
+    },
+    {
+      "s_data": 2,
+      "s_index": 155,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModelSpeed2",
+      "r_index": 155
+    },
+    {
+      "s_data": 2,
+      "s_index": 156,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLColorEnable2",
+      "r_index": 156
+    },
+    {
+      "s_data": 4,
+      "s_index": 157,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel2_Color1",
+      "r_index": 157
+    },
+    {
+      "s_data": 4,
+      "s_index": 159,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel2_Color2",
+      "r_index": 159
+    },
+    {
+      "s_data": 4,
+      "s_index": 161,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel2_Color3",
+      "r_index": 161
+    },
+    {
+      "s_data": 4,
+      "s_index": 163,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel2_Color4",
+      "r_index": 163
+    },
+    {
+      "s_data": 4,
+      "s_index": 165,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel2_Color5",
+      "r_index": 165
+    },
+    {
+      "s_index": 157,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel2_Color1",
+      "r_index": 157
+    },
+    {
+      "s_index": 159,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel2_Color2",
+      "r_index": 159
+    },
+    {
+      "s_index": 161,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel2_Color3",
+      "r_index": 161
+    },
+    {
+      "s_index": 163,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel2_Color4",
+      "r_index": 163
+    },
+    {
+      "s_index": 165,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel2_Color5",
+      "r_index": 165
+    },
+    {
+      "s_index": 154,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModelLight2",
+      "r_index": 154
+    },
+    {
+      "s_index": 155,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModelSpeed2",
+      "r_index": 155
+    },
+    {
+      "s_index": 156,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLColorEnable2",
+      "r_index": 156
+    },
+    {
+      "s_data": 2,
+      "s_index": 169,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModelLight3",
+      "r_index": 169
+    },
+    {
+      "s_index": 169,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModelLight3",
+      "r_index": 169
+    },
+    {
+      "s_data": 2,
+      "s_index": 170,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModelSpeed3",
+      "r_index": 170
+    },
+    {
+      "s_index": 170,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModelSpeed3",
+      "r_index": 170
+    },
+    {
+      "s_data": 2,
+      "s_index": 171,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLColorEnable3",
+      "r_index": 171
+    },
+    {
+      "s_index": 171,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLColorEnable3",
+      "r_index": 171
+    },
+    {
+      "s_data": 4,
+      "s_index": 172,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel3_Color1",
+      "r_index": 172
+    },
+    {
+      "s_index": 172,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel3_Color1",
+      "r_index": 172
+    },
+    {
+      "s_data": 4,
+      "s_index": 174,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel3_Color2",
+      "r_index": 174
+    },
+    {
+      "s_index": 174,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel3_Color2",
+      "r_index": 174
+    },
+    {
+      "s_data": 4,
+      "s_index": 176,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel3_Color3",
+      "r_index": 176
+    },
+    {
+      "s_index": 176,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel3_Color3",
+      "r_index": 176
+    },
+    {
+      "s_data": 4,
+      "s_index": 178,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel3_Color4",
+      "r_index": 178
+    },
+    {
+      "s_index": 178,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel3_Color4",
+      "r_index": 178
+    },
+    {
+      "s_data": 4,
+      "s_index": 180,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel3_Color5",
+      "r_index": 180
+    },
+    {
+      "s_index": 180,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel3_Color5",
+      "r_index": 180
+    },
+    {
+      "s_data": 2,
+      "s_index": 184,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModelLight4",
+      "r_index": 184
+    },
+    {
+      "s_index": 184,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModelLight4",
+      "r_index": 184
+    },
+    {
+      "s_data": 2,
+      "s_index": 185,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModelSpeed4",
+      "r_index": 185
+    },
+    {
+      "s_index": 185,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModelSpeed4",
+      "r_index": 185
+    },
+    {
+      "s_data": 2,
+      "s_index": 186,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLColorEnable4",
+      "r_index": 186
+    },
+    {
+      "s_index": 186,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLColorEnable4",
+      "r_index": 186
+    },
+    {
+      "s_data": 4,
+      "s_index": 187,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel4_Color1",
+      "r_index": 187
+    },
+    {
+      "s_index": 187,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel4_Color1",
+      "r_index": 187
+    },
+    {
+      "s_data": 4,
+      "s_index": 189,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel4_Color2",
+      "r_index": 189
+    },
+    {
+      "s_index": 189,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel4_Color2",
+      "r_index": 189
+    },
+    {
+      "s_data": 4,
+      "s_index": 191,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel4_Color3",
+      "r_index": 191
+    },
+    {
+      "s_index": 191,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel4_Color3",
+      "r_index": 191
+    },
+    {
+      "s_data": 4,
+      "s_index": 193,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel4_Color4",
+      "r_index": 193
+    },
+    {
+      "s_index": 193,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel4_Color4",
+      "r_index": 193
+    },
+    {
+      "s_data": 4,
+      "s_index": 195,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel4_Color5",
+      "r_index": 195
+    },
+    {
+      "s_index": 195,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel4_Color5",
+      "r_index": 195
+    },
+    {
+      "s_index": 2,
+      "ops": "write",
+      "module": "ble",
+      "name": "sNtfMsg",
+      "r_index": 2,
+      "r_cmd": 146,
+      "s_cmd": 146
+    },
+    {
+      "s_index": 0,
+      "ops": "write",
+      "module": "ble",
+      "name": "setNtfSwitch",
+      "r_index": 0,
+      "r_cmd": 146,
+      "s_cmd": 146
+    },
+    {
+      "s_data": 2,
+      "s_index": 1,
+      "ops": "read",
+      "module": "ble",
+      "name": "readNtfSwitch",
+      "r_index": 1,
+      "r_cmd": 146,
+      "s_cmd": 146
+    },
+    {
+      "s_data": 4,
+      "s_index": 148,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLModel1_Color4",
+      "r_index": 148
+    },
+    {
+      "s_index": 146,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModel1_Color3",
+      "r_index": 146
+    },
+    {
+      "s_data": 2,
+      "s_index": 166,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftBool2",
+      "r_index": 166,
+      "retry": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 251,
+      "ops": "read",
+      "module": "dis",
+      "name": "rFunBool5",
+      "r_index": 251
+    },
+    {
+      "s_index": 0,
+      "ops": "write",
+      "module": "dis",
+      "name": "setWhiteList",
+      "r_index": 0,
+      "r_cmd": 177,
+      "s_cmd": 177
+    },
+    {
+      "s_data": 2,
+      "s_index": 3,
+      "ops": "read",
+      "module": "ble",
+      "name": "rNtfStatus",
+      "r_index": 3,
+      "r_cmd": 146,
+      "s_cmd": 146
+    },
+    {
+      "s_index": 4,
+      "ops": "write",
+      "module": "ble",
+      "name": "setNtfStatus",
+      "r_index": 4,
+      "r_cmd": 146,
+      "s_cmd": 146
+    },
+    {
+      "s_data": 2,
+      "s_index": 249,
+      "ops": "read",
+      "module": "tft",
+      "name": "rFunSkinBool",
+      "r_index": 249
+    },
+    {
+      "s_data": 2,
+      "s_index": 120,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLError",
+      "r_index": 120,
+      "retry": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 4,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFL-APLVersion",
+      "r_index": 4,
+      "retry": 1
+    },
+    {
+      "s_data": 18,
+      "s_index": 121,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFLAPL_Status",
+      "r_index": 121,
+      "retry": 1
+    },
+    {
+      "s_data": 32,
+      "s_index": 139,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFLAPL_Data1",
+      "r_index": 139
+    },
+    {
+      "s_data": 32,
+      "s_index": 154,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFLAPL_Data2",
+      "r_index": 154
+    },
+    {
+      "s_data": 32,
+      "s_index": 169,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFLAPL_Data3",
+      "r_index": 169
+    },
+    {
+      "s_data": 32,
+      "s_index": 184,
+      "ops": "read",
+      "module": "fl-apl",
+      "name": "rFLAPL_Data4",
+      "r_index": 184
+    },
+    {
+      "s_data": 2,
+      "s_index": 182,
+      "ops": "read",
+      "module": "dvr-f",
+      "name": "rDVRStatus6",
+      "r_index": 182
+    },
+    {
+      "s_index": 183,
+      "ops": "write",
+      "module": "dvr-f",
+      "name": "setDVRFBool3Bit",
+      "r_index": 183,
+      "r_cmd": 6,
+      "s_cmd": 6
+    },
+    {
+      "s_index": 155,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModelSpeed2Bit",
+      "r_index": 155,
+      "s_cmd": 6
+    },
+    {
+      "s_index": 170,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModelSpeed3Bit",
+      "r_index": 170,
+      "s_cmd": 6
+    },
+    {
+      "s_index": 185,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModelSpeed4Bit",
+      "r_index": 185,
+      "s_cmd": 6
+    },
+    {
+      "s_index": 140,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLModeSpeed1Bit",
+      "r_index": 140,
+      "s_cmd": 6
+    },
+    {
+      "s_index": 156,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLColorEnable2Bit",
+      "r_index": 156,
+      "s_cmd": 6
+    },
+    {
+      "s_index": 141,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLColorEnable1Bit",
+      "r_index": 141,
+      "s_cmd": 6
+    },
+    {
+      "s_index": 171,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLColorEnable3Bit",
+      "r_index": 171,
+      "s_cmd": 6
+    },
+    {
+      "s_index": 186,
+      "ops": "write",
+      "module": "fl-apl",
+      "name": "setFL-APLColorEnable4Bit",
+      "r_index": 186,
+      "s_cmd": 6
+    },
+    {
+      "s_data": 2,
+      "s_index": 0,
+      "ops": "read",
+      "module": "ble",
+      "name": "rOPPOFind",
+      "r_index": 0,
+      "r_cmd": 147,
+      "s_cmd": 147
+    },
+    {
+      "s_index": 1,
+      "ops": "write",
+      "module": "ble",
+      "name": "sOPPOFind",
+      "r_index": 1,
+      "r_cmd": 147,
+      "s_cmd": 147
+    },
+    {
+      "s_data": 6,
+      "s_index": 214,
+      "ops": "read",
+      "module": "dis",
+      "name": "rNimbleOSV",
+      "r_index": 214
+    },
+    {
+      "s_index": 214,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "setNimbleOsVersion",
+      "r_index": 214
+    },
+    {
+      "s_index": 122,
+      "ops": "write",
+      "module": "htg",
+      "name": "wHtgTempMode",
+      "r_index": 122,
+      "s_cmd": 6
+    },
+    {
+      "s_index": 123,
+      "ops": "write",
+      "module": "htg",
+      "name": "wHtgTempValue",
+      "r_index": 123,
+      "s_cmd": 6
+    },
+    {
+      "s_index": 124,
+      "ops": "write",
+      "module": "htg",
+      "name": "wHtgHeatStartTemp",
+      "r_index": 124,
+      "s_cmd": 6
+    },
+    {
+      "s_index": 125,
+      "ops": "write",
+      "module": "htg",
+      "name": "wHtgSwitch",
+      "r_index": 125,
+      "s_cmd": 6
+    },
+    {
+      "s_index": 126,
+      "ops": "write",
+      "module": "htg",
+      "name": "wHtgAppt1",
+      "r_index": 126,
+      "s_cmd": 2
+    },
+    {
+      "s_index": 129,
+      "ops": "write",
+      "module": "htg",
+      "name": "wHtgAppt2",
+      "r_index": 129,
+      "s_cmd": 2
+    },
+    {
+      "s_data": 2,
+      "s_index": 120,
+      "ops": "read",
+      "module": "htg",
+      "name": "rHtgErrorInfo",
+      "r_index": 120,
+      "retry": 1,
+      "s_cmd": 1
+    },
+    {
+      "s_data": 12,
+      "s_index": 120,
+      "ops": "read",
+      "module": "htg",
+      "name": "rHtgAllSetInfo",
+      "r_index": 120,
+      "s_cmd": 1
+    },
+    {
+      "s_data": 16,
+      "s_index": 23,
+      "ops": "read",
+      "module": "htg",
+      "name": "rHtgPN",
+      "r_index": 23,
+      "retry": 1,
+      "s_cmd": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 4,
+      "ops": "read",
+      "module": "htg",
+      "name": "rHtgVersionByPart",
+      "r_index": 4,
+      "s_cmd": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 122,
+      "ops": "read",
+      "module": "htg",
+      "name": "rHtgTempMode",
+      "r_index": 122,
+      "s_cmd": 1
+    },
+    {
+      "s_data": 6,
+      "s_index": 120,
+      "ops": "read",
+      "module": "htg",
+      "name": "rHtgStartAndTempMode",
+      "r_index": 120,
+      "s_cmd": 1
+    },
+    {
+      "s_index": 126,
+      "ops": "write",
+      "module": "htg",
+      "name": "wHtgCardAppt1",
+      "r_index": 126,
+      "s_cmd": 6
+    },
+    {
+      "s_index": 129,
+      "ops": "write",
+      "module": "htg",
+      "name": "wHtgCardAppt2",
+      "r_index": 129,
+      "s_cmd": 6
+    },
+    {
+      "s_data": 2,
+      "s_index": 217,
+      "ops": "read",
+      "module": "dis",
+      "name": "rHtgVersion",
+      "r_index": 217,
+      "s_cmd": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 93,
+      "ops": "read",
+      "module": "ecu",
+      "name": "rHtgBindState",
+      "r_index": 93,
+      "s_cmd": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 79,
+      "ops": "read",
+      "module": "ecu",
+      "name": "rFunECU_0x4F",
+      "r_index": 79
+    },
+    {
+      "s_data": 2,
+      "s_index": 240,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBool_0xF0",
+      "r_index": 240
+    },
+    {
+      "s_index": 240,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "sBool_0xF0",
+      "r_index": 240
+    },
+    {
+      "s_data": 4,
+      "s_index": 164,
+      "ops": "read",
+      "module": "dis",
+      "name": "rGearUnlockMile",
+      "r_index": 164
+    },
+    {
+      "s_data": 2,
+      "s_index": 167,
+      "ops": "read",
+      "module": "tft",
+      "name": "rFileWifiPort",
+      "r_index": 167
+    },
+    {
+      "s_index": 242,
+      "ops": "writeNR",
+      "module": "dis",
+      "name": "sBool_0xF2",
+      "r_index": 242
+    },
+    {
+      "s_data": 2,
+      "s_index": 242,
+      "ops": "read",
+      "module": "dis",
+      "name": "rBool_0xF2",
+      "r_index": 242
+    },
+    {
+      "s_index": 35,
+      "ops": "write",
+      "module": "tft",
+      "name": "setWidget",
+      "r_index": 35
+    },
+    {
+      "s_data": 2,
+      "s_index": 32,
+      "ops": "read",
+      "module": "tft",
+      "name": "rWidgetAudioInfo",
+      "r_index": 32,
+      "retry": 1
+    },
+    {
+      "s_data": 2,
+      "s_index": 35,
+      "ops": "read",
+      "module": "tft",
+      "name": "rWidgetType",
+      "r_index": 35
+    },
+    {
+      "s_data": 20,
+      "s_index": 11,
+      "ops": "read",
+      "module": "ecu",
+      "name": "rICCID",
+      "r_index": 11,
+      "retry": 3
+    },
+    {
+      "s_index": 180,
+      "ops": "write",
+      "module": "ble",
+      "name": "wUserBleIdByBit",
+      "r_index": 180,
+      "s_cmd": 6
+    },
+    {
+      "s_data": 2,
+      "s_index": 245,
+      "ops": "read",
+      "module": "dis",
+      "name": "rSharedUserRights",
+      "r_index": 245
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+name: Build iOS IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+    paths:
+      - "lib/**"
+      - "ios/**"
+      - "assets/**"
+      - "pubspec.yaml"
+      - "pubspec.lock"
+      - ".github/workflows/build-ios-ipa.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-ipa-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build unsigned .ipa (device arm64)
+    runs-on: macos-15
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 本项目 .metadata 锁定的 revision db50e201 对应 Flutter 3.41.6（Dart 3.11.4），
+      # 与 pubspec.yaml 的 sdk: ^3.11.4 精确匹配。不要放开成 channel: stable，
+      # 否则会拉到更新的 stable，插件约束可能解不动。
+      - name: Set up Flutter 3.41.6
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.41.6
+          channel: stable
+          cache: true
+
+      - name: Show toolchain
+        run: |
+          flutter --version
+          xcodebuild -version
+          pod --version
+          sw_vers
+
+      - name: Flutter dependencies
+        run: |
+          flutter pub get
+          flutter precache --ios
+
+      # 作者工程里留着 DEVELOPMENT_TEAM = NDRWM8PEDE，CI 上拿不到这个团队，
+      # 顺手抹掉，避免任何自动签名回落到别人的团队。
+      - name: Strip author's development team
+        run: |
+          sed -i '' 's/DEVELOPMENT_TEAM = NDRWM8PEDE;//g' ios/Runner.xcodeproj/project.pbxproj
+          grep -c DEVELOPMENT_TEAM ios/Runner.xcodeproj/project.pbxproj || true
+
+      - name: Build iOS (Release, no codesign)
+        env:
+          LANG: en_US.UTF-8
+        run: |
+          set -o pipefail
+          flutter build ios --release --no-codesign 2>&1 | tee "$RUNNER_TEMP/flutter-build.log"
+
+      - name: Package ipa
+        run: |
+          set -euo pipefail
+          APP="build/ios/iphoneos/Runner.app"
+          test -d "$APP" || { echo "::error::没有找到 $APP"; exit 1; }
+
+          NAME=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$APP/Info.plist")
+          BNO=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$APP/Info.plist")
+          BID=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$APP/Info.plist")
+          echo "version=$NAME build=$BNO bundle=$BID"
+          echo "--- 架构 ---"
+          lipo -info "$APP/Runner" || true
+          echo "--- 签名状态（预期未签名）---"
+          codesign -dv "$APP" 2>&1 || true
+          echo "--- 嵌套 bundle ---"
+          find "$APP" -name "*.appex" -maxdepth 3 || echo "(无 appex)"
+
+          rm -rf Payload && mkdir -p Payload
+          cp -R "$APP" Payload/Runner.app
+          find Payload -name '_CodeSignature' -type d -prune -exec rm -rf {} + || true
+          find Payload -name 'embedded.mobileprovision' -delete || true
+
+          mkdir -p dist
+          IPA="SegwayBLE-${NAME}-${BNO}-unsigned.ipa"
+          zip -qry "dist/$IPA" Payload
+          echo "IPA=$IPA" >> "$GITHUB_ENV"
+
+          # 原 bundle id 是 com.segway.research.app，多半已被作者团队注册，
+          # 免费 Apple ID 签不上，这里再出一份改 id 的，Sideloadly 可直接签。
+          NEWID="com.liberty322.segwayble"
+          /usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier $NEWID" Payload/Runner.app/Info.plist
+          IPA2="SegwayBLE-${NAME}-${BNO}-unsigned-reid.ipa"
+          rm -rf Payload2 && mkdir -p Payload2
+          cp -R Payload/Runner.app Payload2/Runner.app
+          zip -qry "dist/$IPA2" Payload2
+          echo "IPA2=$IPA2" >> "$GITHUB_ENV"
+
+          {
+            echo "ipa            : $IPA   (bundle id 保留原值 $BID)"
+            echo "ipa (re-id)    : $IPA2   (bundle id 改为 $NEWID，供免费证书签名)"
+            echo "version        : $NAME ($BNO)"
+            echo "flutter        : 3.41.6 / Dart 3.11.4"
+            echo "runner         : macos-15"
+            echo "commit         : ${{ github.sha }}"
+          } > dist/BUILD-INFO.txt
+          cat dist/BUILD-INFO.txt
+          ls -lh dist
+
+      - name: Upload ipa
+        uses: actions/upload-artifact@v4
+        with:
+          name: SegwayBLE-unsigned-IPA
+          path: |
+            dist/*.ipa
+            dist/BUILD-INFO.txt
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload build log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: flutter-build-log
+          path: ${{ runner.temp }}/flutter-build.log
+          if-no-files-found: ignore
+          retention-days: 7

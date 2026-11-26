@@ -1,0 +1,1256 @@
+{
+  "defaultConfigs": {
+    "cmd_writeNR": 3,
+    "cmd_writeACK": 5,
+    "cmd_readACK": 4,
+    "cmd_read": 1,
+    "timeout": 1000,
+    "retry": 5,
+    "cmd_write": 2
+  },
+  "name": "device_commands",
+  "commands": [
+    {
+      "s_data": 2,
+      "s_index": 60,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rBattery",
+      "r_index": 60
+    },
+    {
+      "s_data": 14,
+      "s_index": 16,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rSN",
+      "r_index": 16
+    },
+    {
+      "s_data": 2,
+      "s_index": 59,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rTimeFull",
+      "r_index": 59
+    },
+    {
+      "s_data": -1,
+      "s_value": "$ident",
+      "s_index": 0,
+      "module": "vcu",
+      "name": "openAcc",
+      "timeout": 1500,
+      "s_cmd": 12
+    },
+    {
+      "s_index": 0,
+      "name": "iapBegin",
+      "s_cmd": 7
+    },
+    {
+      "s_index": 0,
+      "name": "iapWrite",
+      "s_cmd": 8
+    },
+    {
+      "s_index": 0,
+      "name": "iapCRC",
+      "s_cmd": 9
+    },
+    {
+      "s_data": 0,
+      "s_index": 0,
+      "name": "firmwareReset",
+      "r_index": 0,
+      "s_cmd": 10
+    },
+    {
+      "s_data": 2,
+      "s_index": 26,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rVCUV",
+      "r_index": 26
+    },
+    {
+      "s_data": 2,
+      "s_index": 26,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rMCUV",
+      "r_index": 26
+    },
+    {
+      "s_data": 2,
+      "s_index": 14,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBMS1V",
+      "r_index": 14,
+      "retry": 0
+    },
+    {
+      "s_data": 2,
+      "s_index": 14,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBMS2V",
+      "r_index": 14
+    },
+    {
+      "s_data": 16,
+      "s_index": 70,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rVCUPN",
+      "r_index": 70
+    },
+    {
+      "s_data": 16,
+      "s_index": 70,
+      "ops": "read",
+      "module": "mcu",
+      "name": "rMCUPN",
+      "r_index": 70
+    },
+    {
+      "s_data": 16,
+      "s_index": 2,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBMS1PN",
+      "r_index": 2,
+      "retry": 0
+    },
+    {
+      "s_data": 16,
+      "s_index": 2,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rBMS2PN",
+      "r_index": 2,
+      "retry": 0
+    },
+    {
+      "s_data": 16,
+      "s_index": 2,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTFTPN",
+      "r_index": 2,
+      "retry": 0
+    },
+    {
+      "s_data": 2,
+      "s_index": 1,
+      "ops": "read",
+      "module": "t-box",
+      "name": "rT-BOXV",
+      "r_index": 1,
+      "retry": 0
+    },
+    {
+      "s_data": 16,
+      "s_index": 70,
+      "ops": "read",
+      "module": "t-box",
+      "name": "rT-BOXPN",
+      "r_index": 70,
+      "retry": 3
+    },
+    {
+      "s_data": -1,
+      "s_index": 1,
+      "ops": "write",
+      "module": "ble",
+      "name": "getInfo",
+      "s_cmd": 111
+    },
+    {
+      "s_data": -1,
+      "s_index": 2,
+      "ops": "write",
+      "module": "ble",
+      "name": "unlockEnable",
+      "s_cmd": 111
+    },
+    {
+      "s_data": -1,
+      "s_index": 3,
+      "ops": "write",
+      "module": "ble",
+      "name": "rssiCali",
+      "s_cmd": 111
+    },
+    {
+      "s_data": -1,
+      "s_index": 4,
+      "ops": "write",
+      "module": "ble",
+      "name": "rssiSet",
+      "s_cmd": 111
+    },
+    {
+      "s_data": -1,
+      "s_index": 5,
+      "ops": "write",
+      "module": "ble",
+      "name": "rssiGet",
+      "s_cmd": 111
+    },
+    {
+      "s_data": -1,
+      "s_index": 12,
+      "ops": "write",
+      "module": "ble",
+      "name": "setConnectMode",
+      "s_cmd": 111
+    },
+    {
+      "s_data": -1,
+      "s_index": 13,
+      "ops": "write",
+      "module": "ble",
+      "name": "getConnectMode",
+      "s_cmd": 111
+    },
+    {
+      "s_data": -1,
+      "s_index": 16,
+      "ops": "write",
+      "module": "ble",
+      "name": "mediaEnable",
+      "s_cmd": 111
+    },
+    {
+      "s_data": 2,
+      "s_index": 80,
+      "ops": "read",
+      "module": "ble",
+      "name": "rFunSupBool",
+      "r_index": 80
+    },
+    {
+      "s_data": 2,
+      "s_index": 29,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rBool_0x1D",
+      "r_index": 29,
+      "timeout": 1000
+    },
+    {
+      "s_data": 2,
+      "s_index": 30,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rBool_0x1E",
+      "r_index": 30
+    },
+    {
+      "s_index": 80,
+      "ops": "write",
+      "module": "vcu",
+      "name": "setVehicleUnit",
+      "r_index": 80
+    },
+    {
+      "s_data": -1,
+      "s_index": 0,
+      "ops": "write",
+      "module": "vcu",
+      "name": "setPwd",
+      "r_index": 0,
+      "retry": 0,
+      "s_cmd": 102
+    },
+    {
+      "s_index": 87,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setCloseLock"
+    },
+    {
+      "s_index": 88,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setAutoLock",
+      "r_index": 88
+    },
+    {
+      "s_data": 2,
+      "s_index": 38,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rAutoLock",
+      "r_index": 38
+    },
+    {
+      "s_index": 38,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setAutoLockTime",
+      "r_index": 38
+    },
+    {
+      "s_index": 93,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setLightSwitch",
+      "r_index": 93
+    },
+    {
+      "s_data": 2,
+      "s_index": 41,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rLightMode",
+      "r_index": 41
+    },
+    {
+      "s_index": 41,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setLightMode",
+      "r_index": 41
+    },
+    {
+      "s_index": 0,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "active",
+      "s_cmd": 87
+    },
+    {
+      "s_data": 12,
+      "s_index": 218,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rCPUId",
+      "r_index": 218
+    },
+    {
+      "s_data": -1,
+      "s_value": "$ident",
+      "s_index": 1,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setBindStatus",
+      "s_cmd": 12
+    },
+    {
+      "s_data": -1,
+      "s_value": "$ident",
+      "s_index": 2,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setUnBindStatus",
+      "s_cmd": 12
+    },
+    {
+      "s_data": 2,
+      "s_index": 39,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rTimeZone",
+      "r_index": 39
+    },
+    {
+      "s_index": 39,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setTimeZone"
+    },
+    {
+      "s_data": 2,
+      "s_index": 36,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rSoundVolume",
+      "r_index": 36
+    },
+    {
+      "s_index": 36,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setSoundVolume",
+      "r_index": 36
+    },
+    {
+      "s_data": 2,
+      "s_index": 35,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rSoundEffect",
+      "r_index": 35
+    },
+    {
+      "s_index": 35,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setSoundEffect"
+    },
+    {
+      "s_index": 85,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setSafetyStatus"
+    },
+    {
+      "s_index": 86,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setSingleAlarm"
+    },
+    {
+      "s_data": 2,
+      "s_index": 33,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rAlarmLevel",
+      "r_index": 33
+    },
+    {
+      "s_index": 33,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setAlarmLevel"
+    },
+    {
+      "s_data": 2,
+      "s_index": 34,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rAlarmVolume",
+      "r_index": 34
+    },
+    {
+      "s_index": 34,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setAlarmVolume"
+    },
+    {
+      "s_data": 2,
+      "s_index": 31,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rBool_0x1F",
+      "r_index": 31
+    },
+    {
+      "s_index": 90,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setPark"
+    },
+    {
+      "s_data": 2,
+      "s_index": 130,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rCfgMode",
+      "r_index": 130
+    },
+    {
+      "s_index": 130,
+      "ops": "writeNR",
+      "module": "bms2",
+      "name": "setCfgMode",
+      "r_index": 130
+    },
+    {
+      "s_data": 4,
+      "s_index": 28,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rAlarm",
+      "r_index": 28
+    },
+    {
+      "s_data": 4,
+      "s_index": 27,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rErrorCode",
+      "r_index": 27
+    },
+    {
+      "s_index": 94,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "device_resetData",
+      "r_index": 94
+    },
+    {
+      "s_data": 1,
+      "s_index": 58,
+      "ops": "write",
+      "module": "ble",
+      "name": "openFindMyPairBroadcast",
+      "r_index": 58
+    },
+    {
+      "s_index": 31,
+      "ops": "write",
+      "module": "ble",
+      "name": "unbondFindMy",
+      "r_index": 31
+    },
+    {
+      "s_data": 2,
+      "s_index": 34,
+      "ops": "read",
+      "module": "ble",
+      "name": "rFindMyPairBroadcast",
+      "r_index": 34,
+      "s_cmd": 111
+    },
+    {
+      "s_data": 2,
+      "s_index": 33,
+      "ops": "read",
+      "module": "ble",
+      "name": "rFindMyBondStatus",
+      "r_index": 33,
+      "s_cmd": 111
+    },
+    {
+      "s_data": 2,
+      "s_index": 36,
+      "ops": "read",
+      "module": "ble",
+      "name": "rFindMyLocationStatus",
+      "r_index": 36,
+      "s_cmd": 111
+    },
+    {
+      "s_data": 16,
+      "s_index": 37,
+      "ops": "read",
+      "module": "ble",
+      "name": "rUUID",
+      "r_index": 37,
+      "s_cmd": 111
+    },
+    {
+      "s_index": 38,
+      "ops": "write",
+      "module": "ble",
+      "name": "setUUID",
+      "r_index": 38,
+      "s_cmd": 111
+    },
+    {
+      "s_data": 16,
+      "s_index": 40,
+      "ops": "read",
+      "module": "ble",
+      "name": "rPN",
+      "r_index": 40
+    },
+    {
+      "s_data": 14,
+      "s_index": 39,
+      "ops": "write",
+      "module": "ble",
+      "name": "rPPID",
+      "r_index": 39,
+      "s_cmd": 111
+    },
+    {
+      "s_index": 82,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "syncBindStatus",
+      "r_index": 82
+    },
+    {
+      "s_data": 16,
+      "s_index": 227,
+      "ops": "read",
+      "module": "tft",
+      "name": "rSSID",
+      "r_index": 227
+    },
+    {
+      "s_data": 8,
+      "s_index": 235,
+      "ops": "read",
+      "module": "tft",
+      "name": "rPASSWORD",
+      "r_index": 235
+    },
+    {
+      "s_data": 4,
+      "s_index": 239,
+      "ops": "read",
+      "module": "tft",
+      "name": "rIP",
+      "r_index": 239
+    },
+    {
+      "s_data": 4,
+      "s_index": 241,
+      "ops": "read",
+      "module": "tft",
+      "name": "rPORT",
+      "r_index": 241
+    },
+    {
+      "s_index": 0,
+      "module": "tft",
+      "name": "file_read_begin",
+      "retry": 0,
+      "s_cmd": 130
+    },
+    {
+      "s_index": 0,
+      "module": "tft",
+      "name": "file_read_data",
+      "s_cmd": 131
+    },
+    {
+      "s_index": 0,
+      "module": "tft",
+      "name": "file_read_verify",
+      "s_cmd": 132
+    },
+    {
+      "s_data": 2,
+      "s_index": 160,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftBool",
+      "r_index": 160
+    },
+    {
+      "s_index": 0,
+      "ops": "write",
+      "module": "tft",
+      "name": "setNaviStart",
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_index": 1,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setNaviDistance",
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_index": 3,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setNaviInfo",
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_index": 16,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setNaviRoad",
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_index": 36,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setNaviRoadNext",
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_index": 56,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setNaviText",
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_index": 255,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setNaviExit",
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_data": 2,
+      "s_index": 42,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rPowerAssist",
+      "r_index": 42
+    },
+    {
+      "s_index": 42,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setPowerAssist",
+      "r_index": 42
+    },
+    {
+      "s_data": 2,
+      "s_index": 48,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rSpeed",
+      "r_index": 48
+    },
+    {
+      "s_data": 2,
+      "s_index": 29,
+      "ops": "read",
+      "module": "ble",
+      "name": "rFindMyStatus",
+      "r_index": 29
+    },
+    {
+      "s_data": 2,
+      "s_index": 32,
+      "ops": "read",
+      "module": "ble",
+      "name": "rFindMyEnable",
+      "r_index": 32
+    },
+    {
+      "s_index": 43,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setSpeedMode",
+      "r_index": 43
+    },
+    {
+      "s_data": 2,
+      "s_index": 43,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rSpeedMode",
+      "r_index": 43
+    },
+    {
+      "s_index": 95,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setAirlockGesture",
+      "r_index": 95
+    },
+    {
+      "s_data": 2,
+      "s_index": 30,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rAirlockGesture",
+      "r_index": 30
+    },
+    {
+      "s_index": 48,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "rAppNaviState",
+      "r_index": 48,
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_index": 12,
+      "ops": "writeNR",
+      "module": "tft",
+      "name": "setNaviDriveInfo",
+      "r_index": 12,
+      "r_cmd": 113,
+      "s_cmd": 113
+    },
+    {
+      "s_data": 2,
+      "s_index": 1,
+      "ops": "read",
+      "module": "tft",
+      "name": "rTftV",
+      "r_index": 1
+    },
+    {
+      "s_data": 0,
+      "s_index": 95,
+      "ops": "write",
+      "module": "vcu",
+      "name": " set_snesor_unlock",
+      "r_index": 95
+    },
+    {
+      "s_data": 1,
+      "s_index": 95,
+      "ops": "write",
+      "module": "vcu",
+      "name": "open_snesor_unlock",
+      "r_index": 95
+    },
+    {
+      "s_data": 2,
+      "s_index": 95,
+      "ops": "read",
+      "module": "vcu",
+      "name": " get_snesor_unlock",
+      "r_index": 95
+    },
+    {
+      "s_data": 1,
+      "s_index": 124,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setEbikeCali",
+      "r_index": 124
+    },
+    {
+      "s_data": 2,
+      "s_index": 123,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rEbikeCaliResult",
+      "r_index": 123
+    },
+    {
+      "s_index": 47,
+      "ops": "write",
+      "module": "vcu",
+      "name": "setAutoP",
+      "r_index": 47
+    },
+    {
+      "s_index": 119,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setClimb",
+      "r_index": 119
+    },
+    {
+      "s_index": 44,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setLockTime",
+      "r_index": 44
+    },
+    {
+      "s_data": 2,
+      "s_index": 44,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rLockTime",
+      "r_index": 44
+    },
+    {
+      "s_data": 2,
+      "s_index": 46,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rBool_0x2E",
+      "r_index": 46
+    },
+    {
+      "s_index": 46,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setBool_0x2E",
+      "r_index": 46
+    },
+    {
+      "s_data": 2,
+      "s_index": 45,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rChargePower",
+      "r_index": 45
+    },
+    {
+      "s_index": 45,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setChargePower",
+      "r_index": 45
+    },
+    {
+      "s_data": 2,
+      "s_index": 51,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rBmsChargePower",
+      "r_index": 51
+    },
+    {
+      "s_data": 2,
+      "s_index": 141,
+      "ops": "read",
+      "module": "bms1",
+      "name": "rChargePowerCurr",
+      "r_index": 141
+    },
+    {
+      "s_index": 92,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setDoNotDisturd",
+      "r_index": 92
+    },
+    {
+      "s_data": 2,
+      "s_index": 17,
+      "ops": "read",
+      "module": "bms2",
+      "name": "rVoltage2",
+      "r_index": 17
+    },
+    {
+      "s_data": 2,
+      "s_index": 106,
+      "ops": "write",
+      "module": "vcu",
+      "name": "setBlindChangeWarn",
+      "r_index": 106
+    },
+    {
+      "s_data": 2,
+      "s_index": 107,
+      "ops": "write",
+      "module": "vcu",
+      "name": "setRearCollisionWarn",
+      "r_index": 107
+    },
+    {
+      "s_index": 104,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "sTCS",
+      "r_index": 104
+    },
+    {
+      "s_index": 105,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "sHillDescentCtrl",
+      "r_index": 105
+    },
+    {
+      "s_data": 2,
+      "s_index": 63,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rTurnLightStatus",
+      "r_index": 63
+    },
+    {
+      "s_data": 2,
+      "s_index": 63,
+      "ops": "write",
+      "module": "vcu",
+      "name": "setTurnLightStatus",
+      "r_index": 63
+    },
+    {
+      "s_index": 18,
+      "ops": "read",
+      "module": "tcu",
+      "name": "ForwardHallValue",
+      "r_index": 18
+    },
+    {
+      "s_data": 2,
+      "s_index": 26,
+      "ops": "read",
+      "module": "tcu",
+      "name": "rTcuV",
+      "r_index": 26
+    },
+    {
+      "s_data": 16,
+      "s_index": 70,
+      "ops": "read",
+      "module": "tcu",
+      "name": "rTcuPN",
+      "r_index": 70
+    },
+    {
+      "s_data": 2,
+      "s_index": 20,
+      "ops": "read",
+      "module": "tcu",
+      "name": "rTargetGear",
+      "r_index": 20
+    },
+    {
+      "s_index": 25,
+      "ops": "writeNR",
+      "module": "tcu",
+      "name": "wGearSlightAdd",
+      "r_index": 25,
+      "s_cmd": 128
+    },
+    {
+      "s_index": 25,
+      "ops": "writeNR",
+      "module": "tcu",
+      "name": "wGearSlightSub",
+      "r_index": 25,
+      "s_cmd": 64
+    },
+    {
+      "s_index": 25,
+      "ops": "writeNR",
+      "module": "tcu",
+      "name": "wGearAdd",
+      "r_index": 25,
+      "s_cmd": 32
+    },
+    {
+      "s_index": 25,
+      "ops": "writeNR",
+      "module": "tcu",
+      "name": "wGearSub",
+      "r_index": 25,
+      "s_cmd": 16
+    },
+    {
+      "s_index": 25,
+      "ops": "writeNR",
+      "module": "tcu",
+      "name": "wGearReset",
+      "r_index": 25,
+      "s_cmd": 8
+    },
+    {
+      "s_value": "2",
+      "s_index": 23,
+      "ops": "read",
+      "module": "tcu",
+      "name": "rCurrentGearSlight",
+      "r_index": 23
+    },
+    {
+      "s_data": 2,
+      "s_index": 27,
+      "ops": "read",
+      "module": "tcu",
+      "name": "rTcuFault",
+      "r_index": 27
+    },
+    {
+      "s_index": 1,
+      "ops": "write",
+      "module": "ble",
+      "name": "wMediaState",
+      "r_index": 1,
+      "r_cmd": 144,
+      "timeout": 500,
+      "s_cmd": 144
+    },
+    {
+      "s_index": 2,
+      "ops": "write",
+      "module": "ble",
+      "name": "wMediaInfo",
+      "r_index": 2,
+      "r_cmd": 144,
+      "timeout": 500,
+      "s_cmd": 144
+    },
+    {
+      "s_index": 0,
+      "ops": "writeNR",
+      "module": "ble",
+      "name": "wMediaControlAck",
+      "r_index": 0,
+      "s_cmd": 144
+    },
+    {
+      "s_data": 2,
+      "s_index": 160,
+      "ops": "read",
+      "module": "vcu",
+      "name": "autoToP",
+      "r_index": 160
+    },
+    {
+      "s_data": 2,
+      "s_index": 111,
+      "ops": "write",
+      "module": "vcu",
+      "name": "wSosSwitch",
+      "r_index": 111
+    },
+    {
+      "s_data": 2,
+      "s_index": 29,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rMainPowerEbike",
+      "r_index": 29
+    },
+    {
+      "s_data": 2,
+      "s_index": 161,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rAccurateLife",
+      "r_index": 161
+    },
+    {
+      "s_data": 2,
+      "s_index": 163,
+      "ops": "write",
+      "module": "vcu",
+      "name": "setRadarAlarm",
+      "r_index": 163
+    },
+    {
+      "s_data": 2,
+      "s_index": 163,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rRadioAlarm",
+      "r_index": 163
+    },
+    {
+      "s_data": 2,
+      "s_index": 164,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rAccessoryCompleteStatus",
+      "r_index": 164
+    },
+    {
+      "s_data": 2,
+      "s_index": 165,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rDemandSupport",
+      "r_index": 165
+    },
+    {
+      "s_data": 20,
+      "s_index": 224,
+      "ops": "read",
+      "module": "t-box",
+      "name": "rICCID",
+      "r_index": 224,
+      "retry": 3
+    },
+    {
+      "s_data": 2,
+      "s_index": 165,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rBool_0xA5",
+      "r_index": 165
+    },
+    {
+      "s_data": 2,
+      "s_index": 166,
+      "ops": "writeNR",
+      "module": "vcu",
+      "name": "setGearShift",
+      "r_index": 166
+    },
+    {
+      "s_data": 2,
+      "s_index": 164,
+      "ops": "write",
+      "module": "vcu",
+      "name": "setAccessoryCompleteStatus",
+      "r_index": 164
+    },
+    {
+      "s_data": 2,
+      "s_index": 112,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rVcuBool_0x70",
+      "r_index": 112
+    },
+    {
+      "s_data": 2,
+      "s_index": 112,
+      "ops": "write",
+      "module": "vcu",
+      "name": "wVcuBool_0x70",
+      "r_index": 112
+    },
+    {
+      "s_data": 2,
+      "s_index": 167,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rBool_0xA7",
+      "r_index": 167
+    },
+    {
+      "s_data": 2,
+      "s_index": 167,
+      "ops": "write",
+      "module": "vcu",
+      "name": "wBool_0xA7",
+      "r_index": 167
+    },
+    {
+      "s_data": 2,
+      "s_index": 168,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rBool_0xA8",
+      "r_index": 168
+    },
+    {
+      "s_data": 2,
+      "s_index": 168,
+      "ops": "write",
+      "module": "vcu",
+      "name": "wBool_0xA8",
+      "r_index": 168
+    },
+    {
+      "s_data": 2,
+      "s_index": 169,
+      "ops": "write",
+      "module": "vcu",
+      "name": "wBool_0xA9",
+      "r_index": 169
+    },
+    {
+      "s_data": 2,
+      "s_index": 169,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rBool_0xA9",
+      "r_index": 169
+    },
+    {
+      "s_data": 2,
+      "s_index": 32,
+      "ops": "read",
+      "module": "vcu",
+      "name": "rBool_0x20",
+      "r_index": 32
+    },
+    {
+      "s_data": 2,
+      "s_index": 26,
+      "ops": "read",
+      "module": "xiro",
+      "name": "rXiroV",
+      "r_index": 26
+    },
+    {
+      "s_data": 16,
+      "s_index": 70,
+      "ops": "read",
+      "module": "xiro",
+      "name": "rXiroPN",
+      "r_index": 70
+    }
+  ]
+}
