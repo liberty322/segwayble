@@ -96,13 +96,23 @@ jobs:
 
           # 原 bundle id 是 com.segway.research.app，多半已被作者团队注册，
           # 免费 Apple ID 签不上，这里再出一份改 id 的，Sideloadly 可直接签。
+          # ipa 的根目录必须叫 Payload，所以单独开 staging 目录再进到里面打 zip。
           NEWID="com.liberty322.segwayble"
-          /usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier ${NEWID}" Payload/Runner.app/Info.plist
           IPA2="SegwayBLE-${NAME}-${BNO}-unsigned-reid.ipa"
-          rm -rf Payload2 && mkdir -p Payload2
-          cp -R Payload/Runner.app Payload2/Runner.app
-          zip -qry "dist/${IPA2}" Payload2
+          rm -rf reid && mkdir -p reid/Payload
+          cp -R "${APP}" reid/Payload/Runner.app
+          /usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier ${NEWID}" reid/Payload/Runner.app/Info.plist
+          ( cd reid && zip -qry "../dist/${IPA2}" Payload )
           echo "IPA2=${IPA2}" >> "${GITHUB_ENV}"
+
+          echo "--- 校验 ipa 根目录必须是 Payload/ ---"
+          for f in dist/*.ipa; do
+            head=$(unzip -Z1 "${f}" | head -1)
+            case "${head}" in
+              Payload/*) echo "OK   ${f}  -> ${head}" ;;
+              *) echo "::error::${f} 的根目录是 ${head}，不是 Payload/"; exit 1 ;;
+            esac
+          done
 
           test -s "dist/${IPA}"  || { echo "::error::${IPA} 生成失败"; exit 1; }
           test -s "dist/${IPA2}" || { echo "::error::${IPA2} 生成失败"; exit 1; }
