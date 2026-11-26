@@ -67,48 +67,54 @@ jobs:
 
       - name: Package ipa
         run: |
-          set -euo pipefail
+          # 注意：这里不要用 set -u。macOS 自带 bash 3.2 会把 $VAR 紧跟的全角标点
+          # 当成变量名的一部分，直接报 unbound variable。所有变量统一用 ${VAR} 包。
+          set -eo pipefail
           APP="build/ios/iphoneos/Runner.app"
-          test -d "$APP" || { echo "::error::没有找到 $APP"; exit 1; }
+          test -d "${APP}" || { echo "::error::没有找到 ${APP}"; exit 1; }
 
-          NAME=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$APP/Info.plist")
-          BNO=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$APP/Info.plist")
-          BID=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$APP/Info.plist")
-          echo "version=$NAME build=$BNO bundle=$BID"
-          echo "--- 架构 ---"
-          lipo -info "$APP/Runner" || true
-          echo "--- 签名状态（预期未签名）---"
-          codesign -dv "$APP" 2>&1 || true
-          echo "--- 嵌套 bundle ---"
-          find "$APP" -name "*.appex" -maxdepth 3 || echo "(无 appex)"
+          NAME=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "${APP}/Info.plist")
+          BNO=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "${APP}/Info.plist")
+          BID=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "${APP}/Info.plist")
+          echo "version=${NAME} build=${BNO} bundle=${BID}"
+          echo "--- arch ---"
+          lipo -info "${APP}/Runner" || true
+          echo "--- signature (expect unsigned) ---"
+          codesign -dv "${APP}" 2>&1 || true
+          echo "--- nested bundles ---"
+          find "${APP}" -name "*.appex" -maxdepth 3 || echo "(none)"
 
           rm -rf Payload && mkdir -p Payload
-          cp -R "$APP" Payload/Runner.app
+          cp -R "${APP}" Payload/Runner.app
           find Payload -name '_CodeSignature' -type d -prune -exec rm -rf {} + || true
           find Payload -name 'embedded.mobileprovision' -delete || true
 
           mkdir -p dist
           IPA="SegwayBLE-${NAME}-${BNO}-unsigned.ipa"
-          zip -qry "dist/$IPA" Payload
-          echo "IPA=$IPA" >> "$GITHUB_ENV"
+          zip -qry "dist/${IPA}" Payload
+          echo "IPA=${IPA}" >> "${GITHUB_ENV}"
 
           # 原 bundle id 是 com.segway.research.app，多半已被作者团队注册，
           # 免费 Apple ID 签不上，这里再出一份改 id 的，Sideloadly 可直接签。
           NEWID="com.liberty322.segwayble"
-          /usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier $NEWID" Payload/Runner.app/Info.plist
+          /usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier ${NEWID}" Payload/Runner.app/Info.plist
           IPA2="SegwayBLE-${NAME}-${BNO}-unsigned-reid.ipa"
           rm -rf Payload2 && mkdir -p Payload2
           cp -R Payload/Runner.app Payload2/Runner.app
-          zip -qry "dist/$IPA2" Payload2
-          echo "IPA2=$IPA2" >> "$GITHUB_ENV"
+          zip -qry "dist/${IPA2}" Payload2
+          echo "IPA2=${IPA2}" >> "${GITHUB_ENV}"
+
+          test -s "dist/${IPA}"  || { echo "::error::${IPA} 生成失败"; exit 1; }
+          test -s "dist/${IPA2}" || { echo "::error::${IPA2} 生成失败"; exit 1; }
 
           {
-            echo "ipa            : $IPA   (bundle id 保留原值 $BID)"
-            echo "ipa (re-id)    : $IPA2   (bundle id 改为 $NEWID，供免费证书签名)"
-            echo "version        : $NAME ($BNO)"
-            echo "flutter        : 3.41.6 / Dart 3.11.4"
-            echo "runner         : macos-15"
-            echo "commit         : ${{ github.sha }}"
+            echo "ipa         : ${IPA}"
+            echo "ipa (re-id) : ${IPA2}"
+            echo "bundle id   : ${BID} -> ${NEWID}"
+            echo "version     : ${NAME} (${BNO})"
+            echo "flutter     : 3.41.6 / Dart 3.11.4"
+            echo "runner      : macos-15"
+            echo "commit      : $(git rev-parse HEAD)"
           } > dist/BUILD-INFO.txt
           cat dist/BUILD-INFO.txt
           ls -lh dist
