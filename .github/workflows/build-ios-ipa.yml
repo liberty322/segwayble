@@ -97,10 +97,12 @@ jobs:
           # 原 bundle id 是 com.segway.research.app，多半已被作者团队注册，
           # 免费 Apple ID 签不上，这里再出一份改 id 的，Sideloadly 可直接签。
           # ipa 的根目录必须叫 Payload，所以单独开 staging 目录再进到里面打 zip。
+          # 复制源要用已经剥过签名的 Payload/Runner.app，不要用 ${APP}，
+          # 否则 Frameworks/*.framework/_CodeSignature 会被一起带进来。
           NEWID="com.liberty322.segwayble"
           IPA2="SegwayBLE-${NAME}-${BNO}-unsigned-reid.ipa"
           rm -rf reid && mkdir -p reid/Payload
-          cp -R "${APP}" reid/Payload/Runner.app
+          cp -R Payload/Runner.app reid/Payload/Runner.app
           /usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier ${NEWID}" reid/Payload/Runner.app/Info.plist
           ( cd reid && zip -qry "../dist/${IPA2}" Payload )
           echo "IPA2=${IPA2}" >> "${GITHUB_ENV}"
